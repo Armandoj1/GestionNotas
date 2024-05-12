@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\BLL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|..\\PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\presentacion\\frmestudiantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|..\\PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|..\\PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|..\\PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|..\\DAL\\DAL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,11 +38,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\Program.cs",
+              "RelativeDocumentMoniker": "..\\PRESENTACION\\Program.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\Program.cs",
+              "RelativeToolTip": "..\\PRESENTACION\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T13:57:25.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProgramaPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
+              "RelativeDocumentMoniker": "..\\PRESENTACION\\ProgramaPrincipal.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
+              "RelativeToolTip": "..\\PRESENTACION\\ProgramaPrincipal.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwB4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T13:52:00.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmEstudiantes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs",
+              "RelativeDocumentMoniker": "..\\PRESENTACION\\FrmEstudiantes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\PRESENTACION\\FrmEstudiantes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T13:51:54.774Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ProgramaPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
+              "RelativeDocumentMoniker": "..\\PRESENTACION\\ProgramaPrincipal.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\PRESENTACION\\ProgramaPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T13:41:45.136Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\Form1.cs",
               "RelativeDocumentMoniker": "..\\PRESENTACION\\Form1.cs",
@@ -38,24 +100,22 @@
               "RelativeToolTip": "..\\PRESENTACION\\Form1.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAwBsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T21:12:43.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T21:12:43.668Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\Form1.cs",
               "RelativeDocumentMoniker": "..\\PRESENTACION\\Form1.cs",
               "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\PRESENTACION\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "..\\PRESENTACION\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:47:07.544Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-10T20:47:07.544Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\ENTITY\\Class1.cs",
               "RelativeDocumentMoniker": "..\\ENTITY\\Class1.cs",
@@ -63,12 +123,11 @@
               "RelativeToolTip": "..\\ENTITY\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:46:52.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T20:46:52.074Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "conexion.cs",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\DAL\\conexion.cs",
               "RelativeDocumentMoniker": "..\\DAL\\conexion.cs",
@@ -81,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Testeo.cs",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\BLL\\Testeo.cs",
               "RelativeDocumentMoniker": "Testeo.cs",
@@ -89,8 +148,7 @@
               "RelativeToolTip": "Testeo.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAB6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:46:21.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T20:46:21.601Z"
             }
           ]
         }

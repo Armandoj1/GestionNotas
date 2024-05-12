@@ -15,3 +15,4 @@ C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\Pr
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.exe
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.ProgramaPrincipal.resources
