@@ -7,7 +7,7 @@ namespace DAL
 {
     public class Conexion
     {
-        static string connectionString = "Data Source=108.181.184.38;Initial Catalog=JoseDario_NotasDB;User ID=joserodriguez;Password=Holamundo123*;";
+        static string connectionString = "Data Source=sql.holamundodevs.com;Initial Catalog=Jose_NotasDB;User ID=joserodriguez;Password=Holamundo123*;";
         SqlConnection connection = new SqlConnection(connectionString);
 
         public bool Conectar()
