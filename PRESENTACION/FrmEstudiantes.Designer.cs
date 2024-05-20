@@ -86,6 +86,9 @@
             this.TxtCC.Name = "TxtCC";
             this.TxtCC.Size = new System.Drawing.Size(218, 22);
             this.TxtCC.TabIndex = 3;
+            this.TxtCC.TextChanged += new System.EventHandler(this.TxtCC_TextChanged);
+            this.TxtCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCC_KeyPress);
+            this.TxtCC.Leave += new System.EventHandler(this.TxtCC_Leave);
             // 
             // label3
             // 
@@ -127,6 +130,9 @@
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(218, 22);
             this.TxtTelefono.TabIndex = 9;
+            this.TxtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
+            this.TxtTelefono.Leave += new System.EventHandler(this.TxtTelefono_Leave);
             // 
             // PickerNacimiento
             // 
