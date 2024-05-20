@@ -1,0 +1,12 @@
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\ENTITY\bin\Debug\ENTITY.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\ENTITY\bin\Debug\ENTITY.pdb
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\ENTITY\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\ENTITY\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\ENTITY\obj\Debug\ENTITY.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\ENTITY\obj\Debug\ENTITY.pdb
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\ENTITY\bin\Debug\ENTITY.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\ENTITY\bin\Debug\ENTITY.pdb
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\ENTITY\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\ENTITY\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\ENTITY\obj\Debug\ENTITY.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\ENTITY\obj\Debug\ENTITY.pdb
