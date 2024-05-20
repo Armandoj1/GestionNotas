@@ -40,7 +40,7 @@
             this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.PickerNacimiento = new System.Windows.Forms.DateTimePicker();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnModificarEstudiante = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,9 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(817, 495);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // TxtNombreCompleto
             // 
@@ -151,21 +154,22 @@
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // button2
+            // BtnModificarEstudiante
             // 
-            this.button2.Location = new System.Drawing.Point(12, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 34);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnModificarEstudiante.Location = new System.Drawing.Point(12, 352);
+            this.BtnModificarEstudiante.Name = "BtnModificarEstudiante";
+            this.BtnModificarEstudiante.Size = new System.Drawing.Size(218, 34);
+            this.BtnModificarEstudiante.TabIndex = 13;
+            this.BtnModificarEstudiante.Text = "Modificar";
+            this.BtnModificarEstudiante.UseVisualStyleBackColor = true;
+            this.BtnModificarEstudiante.Click += new System.EventHandler(this.BtnModificarEstudiante_Click);
             // 
             // FrmEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 519);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnModificarEstudiante);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.PickerNacimiento);
             this.Controls.Add(this.label5);
@@ -201,6 +205,6 @@
         private System.Windows.Forms.TextBox TxtTelefono;
         private System.Windows.Forms.DateTimePicker PickerNacimiento;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnModificarEstudiante;
     }
 }

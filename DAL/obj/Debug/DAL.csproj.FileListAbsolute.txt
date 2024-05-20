@@ -4,3 +4,9 @@ C:\Users\José A. Rodríguez\source\repos\GestionNotas\DAL\obj\Debug\DAL.csproj.
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\DAL\obj\Debug\DAL.dll
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\DAL\obj\Debug\DAL.pdb
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\DAL\obj\Debug\DAL.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\DAL\obj\Debug\DAL.pdb
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\DAL\bin\Debug\DAL.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\DAL\bin\Debug\DAL.pdb
