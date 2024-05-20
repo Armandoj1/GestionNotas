@@ -12,10 +12,10 @@ namespace BLL
     {
         DAL_Estudiantes estudiante = new DAL_Estudiantes();
 
-        public string AgregarEstudiante(string nombre, string CC, DateTime FechaNacimiento, string direccion, string telefono)
+        public void AgregarEstudiante(string nombre, string CC, DateTime FechaNacimiento, string direccion, string telefono)
         {
          
-            return estudiante.AgregarEstudiante(nombre, CC, FechaNacimiento, direccion, telefono);
+            estudiante.AgregarEstudiante(nombre, CC, FechaNacimiento, direccion, telefono);
 
         }
 

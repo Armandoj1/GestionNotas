@@ -15,13 +15,93 @@ namespace PRESENTACION
     public partial class FrmEstudiantes : Form
     {
         BLL_Estudiantescs BLL = new BLL_Estudiantescs();
-        
+
         public FrmEstudiantes()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
 
         }
+        #region "Controles de textbox"
+
+
+
+        void Limpiar()
+        {
+            TxtTelefono.Text = "";
+            TxtCC.Text = "";
+            TxtDireccion.Text = "";
+            TxtNombreCompleto.Text = "";
+            PickerNacimiento.Text = "";
+        }
+        
+        
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+        private void TxtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtTelefono.Text.Length > 10)
+            {
+                TxtTelefono.Text = TxtTelefono.Text.Substring(0, 10);
+                TxtTelefono.SelectionStart = TxtTelefono.Text.Length;
+            }
+        }
+
+        private void TxtTelefono_Leave(object sender, EventArgs e)
+        {
+            if (TxtTelefono.Text.Length > 10)
+            {
+
+                MessageBox.Show("El número de celular no puede exceder 10 números.");
+                TxtTelefono.Focus();
+
+            }
+
+        }
+
+
+        private void TxtCC_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtCC.Text.Length > 10)
+            {
+                TxtCC.Text = TxtCC.Text.Substring(0, 10);
+                TxtCC.SelectionStart = TxtCC.Text.Length;
+            }
+            
+
+        }
+
+        private void TxtCC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void TxtCC_Leave(object sender, EventArgs e)
+        {
+            if(TxtCC.Text.Length > 10)
+            {
+                MessageBox.Show("La cédula no puede exceder los 10 caracteres.");
+                TxtCC.Focus();
+            }
+
+
+        }
+
+
+        #endregion
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -33,23 +113,37 @@ namespace PRESENTACION
 
         }
 
+
+        #region "Procedimientos"
+
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty && TxtTelefono.Text != string.Empty)
+                {
+                    E_Estudiantes estudiante = new E_Estudiantes();
+                    estudiante.Nombre = TxtNombreCompleto.Text;
+                    estudiante.CC = TxtCC.Text;
+                    estudiante.FechaNacimiento = PickerNacimiento.Value.Date;
+                    estudiante.Direccion = TxtDireccion.Text;
+                    estudiante.Telefono = TxtTelefono.Text;
 
-                E_Estudiantes estudiante = new E_Estudiantes();
-                estudiante.Nombre = TxtNombreCompleto.Text;
-                estudiante.CC = TxtCC.Text;
-                estudiante.FechaNacimiento = PickerNacimiento.Value.Date;
-                estudiante.Direccion = TxtDireccion.Text;
-                estudiante.Telefono = TxtTelefono.Text;
-
-                string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
+                    string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
 
 
-                BLL.AgregarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
+                    BLL.AgregarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
 
+                    MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+
+                }
+                else
+                {
+
+                    MessageBox.Show("¡Aún tienes datos que llenar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
             }
             catch (Exception ex)
             {
@@ -58,9 +152,11 @@ namespace PRESENTACION
 
             }
 
-
-
-
         }
+
+
+        #endregion
+
+       
     }
 }
