@@ -70,12 +70,6 @@
     <Compile Include="Frm_EstudiantesGrados.Designer.cs">
       <DependentUpon>Frm_EstudiantesGrados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgramaPrincipal.cs">
       <SubType>Form</SubType>
@@ -95,9 +89,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_EstudiantesGrados.resx">
       <DependentUpon>Frm_EstudiantesGrados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgramaPrincipal.resx">
       <DependentUpon>ProgramaPrincipal.cs</DependentUpon>
