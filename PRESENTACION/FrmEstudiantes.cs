@@ -20,22 +20,32 @@ namespace PRESENTACION
         public void MostrarDgv()
         {
             dataGridView1.DataSource = BLL.ConsultarEstudiantes();
+            this.FormatoEstudiantes();
+
         }
 
-        public void Ajuste()
+
+        public void FormatoEstudiantes()
         {
-            if (dataGridView1.Columns.Count > 0)
-            {
-                dataGridView1.Columns["Nombre"].Width = 160;
-            }
+            dataGridView1.Columns[0].HeaderText = "Cédula";
+            dataGridView1.Columns[1].HeaderText = "Nombre";
+            dataGridView1.Columns[1].Width = 160;
+            dataGridView1.Columns[2].HeaderText = "Fecha de nacimiento";
+            dataGridView1.Columns[3].HeaderText = "Dirección";
+            dataGridView1.Columns[4].HeaderText = "Teléfono";
+            dataGridView1.Columns[5].HeaderText = "Grado";
+            dataGridView1.Columns[5].Width = 60;
+            dataGridView1.Columns[6].HeaderText = "Fecha de inclusión";
+            dataGridView1.Columns[6].Width = 90;
+
         }
+     
 
         public FrmEstudiantes()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             MostrarDgv();
-            Ajuste();
 
         }
         #region "Controles de textbox"
@@ -133,11 +143,10 @@ namespace PRESENTACION
             // Verifica que la fila clickeada no es una fila de encabezado
             if (dataGridView1.RowCount > 0 && e.RowIndex >= 0)
             {
-                // Obtén la fila clickeada
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
                 // Extrae los valores de las celdas
-                string nombre = row.Cells["Nombre"].Value.ToString();
+                string nombre = row.Cells["NombreCompleto"].Value.ToString();
                 string cc = row.Cells["CC"].Value.ToString();
                 string fechaNacimiento = row.Cells["FechaNacimiento"].Value.ToString();
                 string direccion = row.Cells["Direccion"].Value.ToString();
@@ -146,7 +155,7 @@ namespace PRESENTACION
                 // Asigna los valores a los controles correspondientes
                 TxtNombreCompleto.Text = nombre;
                 TxtCC.Text = cc;
-                PickerNacimiento.Value = DateTime.Parse(fechaNacimiento); // Asignar a DateTimePicker
+                PickerNacimiento.Value = DateTime.Parse(fechaNacimiento); 
                 TxtDireccion.Text = direccion;
                 TxtTelefono.Text = telefono;
             }
@@ -235,7 +244,7 @@ namespace PRESENTACION
                     string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
 
 
-                    BLL.AgregarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
+                    BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
 
                     MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
@@ -244,8 +253,7 @@ namespace PRESENTACION
                 else
                 {
 
-                    MessageBox.Show("¡Aún tienes datos que llenar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    
+                    MessageBox.Show("¡Aún tienes datos que llenar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);   
 
                 }
             }
@@ -321,8 +329,28 @@ namespace PRESENTACION
 
 
 
+
         #endregion
 
-   
+        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_AsignarGrado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Frm_EstudiantesGrados ventana = new Frm_EstudiantesGrados();
+                ventana.ShowDialog();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro: ", ex.Message);;
+            }
+        }
     }
 }

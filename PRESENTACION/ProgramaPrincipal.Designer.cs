@@ -130,6 +130,7 @@
             this.BtnGestionGrados.TabIndex = 0;
             this.BtnGestionGrados.Text = "Gestionar grados";
             this.BtnGestionGrados.UseVisualStyleBackColor = true;
+            this.BtnGestionGrados.Click += new System.EventHandler(this.BtnGestionGrados_Click);
             // 
             // BtnGestionEstudiante
             // 
@@ -157,7 +158,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(200, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1075, 39);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1298, 39);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // PanelPrincipal
@@ -166,20 +167,21 @@
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelPrincipal.Location = new System.Drawing.Point(200, 39);
             this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(1075, 543);
+            this.PanelPrincipal.Size = new System.Drawing.Size(1298, 543);
             this.PanelPrincipal.TabIndex = 2;
             // 
             // ProgramaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 582);
+            this.ClientSize = new System.Drawing.Size(1498, 582);
             this.Controls.Add(this.PanelPrincipal);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "ProgramaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProgramaPrincipal";
+            this.Load += new System.EventHandler(this.ProgramaPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

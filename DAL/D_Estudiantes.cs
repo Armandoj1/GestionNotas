@@ -11,28 +11,41 @@ public class D_Estudiantes
     public DataTable ConsultarAlumnos()
     {
         
-        string query = "Select * from Estudiantes";
-        SqlCommand cmd = new SqlCommand(query, connection);
+       
+        SqlCommand cmd = new SqlCommand("MostrarAlumnos", connection);
         SqlDataAdapter data = new SqlDataAdapter(cmd);
         DataTable dataTable = new DataTable();
         data.Fill(dataTable);
         return dataTable;
         
     }
-     public DataTable BuscarAlumno(string CC)
-     {
-
-        string query = "SELECT * FROM Estudiantes WHERE CC LIKE @CC + '%'";
-        using (SqlCommand command = new SqlCommand(query, connection))
+    public DataTable BuscarAlumno(string CC)
+    {
+        try
         {
-            command.Parameters.AddWithValue("@CC", CC);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            DataTable tabla = new DataTable();
-            dataAdapter.Fill(tabla);
-            return tabla;
+            using (SqlCommand command = new SqlCommand("FiltrarAlumno", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@CC", CC);
+                connection.Open();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable tabla = new DataTable();
+                dataAdapter.Fill(tabla);
+                return tabla;
+            }
         }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+            if (connection.State == ConnectionState.Open)
+                connection.Close();
+        }
+    }
 
-     }
+
 
     public void EliminarEstudiante(string CC)
     {
@@ -69,8 +82,8 @@ public class D_Estudiantes
             SqlCommand cmd = new SqlCommand("RegistrarEstudiante", connection);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@Nombre", nombre);
             cmd.Parameters.AddWithValue("@CC", CC);
+            cmd.Parameters.AddWithValue("@Nombre", nombre);
             cmd.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
             cmd.Parameters.AddWithValue("@Direccion", direccion);
             cmd.Parameters.AddWithValue("@Telefono", telefono);
@@ -79,7 +92,7 @@ public class D_Estudiantes
         }
         catch (Exception ex)
         {
-            throw new ApplicationException("Error al agregar el estudiante", ex);
+            throw new ApplicationException(ex.Message);
         }
         finally
         {
