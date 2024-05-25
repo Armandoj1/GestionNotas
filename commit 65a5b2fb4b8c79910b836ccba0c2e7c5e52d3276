@@ -1,0 +1,23 @@
+[33mcommit bf91d845c82ad88c079ef97884b29650db7dfdf3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtest[m[33m)[m
+Author: Armandoj1 <josearmandorodriguez@unicesar.edu.co>
+Date:   Fri May 24 18:22:00 2024 -0500
+
+    Cambios grados y estudiantes
+
+[33mcommit 65a5b2fb4b8c79910b836ccba0c2e7c5e52d3276[m
+Author: Armandoj1 <josearmandorodriguez@unicesar.edu.co>
+Date:   Fri May 24 18:16:23 2024 -0500
+
+    Agregar archivos grandes y utilizar Git LFS
+
+[33mcommit 185597e7249163aeb2f0a57f9617b3e943c0f04d[m
+Author: Armandoj1 <josearmandorodriguez@unicesar.edu.co>
+Date:   Fri May 24 18:05:34 2024 -0500
+
+    Estudiantes y grados, preliminar
+
+[33mcommit dce680b670ab7e5fb1bf9ffa9941b86d538e64bb[m[33m ([m[1;31morigin/test[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Armandoj1 <josearmandorodriguez@unicesar.edu.co>
+Date:   Tue May 21 00:38:53 2024 -0500
+
+    Restauración de archivos

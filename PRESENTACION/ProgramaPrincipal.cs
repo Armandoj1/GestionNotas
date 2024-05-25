@@ -31,5 +31,22 @@ namespace PRESENTACION
             estudiantes.Show();
 
         }
+
+        private void ProgramaPrincipal_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void BtnGestionGrados_Click(object sender, EventArgs e)
+        {
+            FrmGestionGrados grados = new FrmGestionGrados();
+            grados.FormBorderStyle = FormBorderStyle.None;
+            grados.TopLevel = false;
+            PanelPrincipal.Controls.Add(grados);
+            grados.Dock = DockStyle.Fill;
+            grados.Show();
+
+        }
     }
 }

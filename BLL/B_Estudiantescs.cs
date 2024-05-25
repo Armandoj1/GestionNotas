@@ -26,7 +26,7 @@ namespace BLL
         public void AgregarEstudiante(string nombre, string CC, DateTime FechaNacimiento, string direccion, string telefono)
         {
          
-            estudiante.AgregarEstudiante(nombre, CC, FechaNacimiento, direccion, telefono);
+            estudiante.AgregarEstudiante (CC, nombre, FechaNacimiento, direccion, telefono);
 
         }
 

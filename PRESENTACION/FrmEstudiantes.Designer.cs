@@ -44,6 +44,8 @@
             this.TxtCCBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
+            this.Btn_Cerrar = new System.Windows.Forms.Button();
+            this.Btn_AsignarGrado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(817, 473);
+            this.dataGridView1.Size = new System.Drawing.Size(1017, 473);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -169,7 +171,7 @@
             // 
             // TxtCCBuscar
             // 
-            this.TxtCCBuscar.Location = new System.Drawing.Point(849, 6);
+            this.TxtCCBuscar.Location = new System.Drawing.Point(1049, 6);
             this.TxtCCBuscar.Name = "TxtCCBuscar";
             this.TxtCCBuscar.Size = new System.Drawing.Size(218, 22);
             this.TxtCCBuscar.TabIndex = 14;
@@ -178,7 +180,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(726, 9);
+            this.label6.Location = new System.Drawing.Point(926, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 16);
             this.label6.TabIndex = 15;
@@ -194,11 +196,33 @@
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Location = new System.Drawing.Point(12, 473);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(218, 34);
+            this.Btn_Cerrar.TabIndex = 17;
+            this.Btn_Cerrar.Text = "Cerrar pestaña";
+            this.Btn_Cerrar.UseVisualStyleBackColor = true;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
+            // 
+            // Btn_AsignarGrado
+            // 
+            this.Btn_AsignarGrado.Location = new System.Drawing.Point(12, 432);
+            this.Btn_AsignarGrado.Name = "Btn_AsignarGrado";
+            this.Btn_AsignarGrado.Size = new System.Drawing.Size(218, 34);
+            this.Btn_AsignarGrado.TabIndex = 18;
+            this.Btn_AsignarGrado.Text = "Asignar grado";
+            this.Btn_AsignarGrado.UseVisualStyleBackColor = true;
+            this.Btn_AsignarGrado.Click += new System.EventHandler(this.Btn_AsignarGrado_Click);
+            // 
             // FrmEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 519);
+            this.ClientSize = new System.Drawing.Size(1289, 523);
+            this.Controls.Add(this.Btn_AsignarGrado);
+            this.Controls.Add(this.Btn_Cerrar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtCCBuscar);
@@ -242,5 +266,7 @@
         private System.Windows.Forms.TextBox TxtCCBuscar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button Btn_Cerrar;
+        private System.Windows.Forms.Button Btn_AsignarGrado;
     }
 }

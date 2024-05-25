@@ -58,6 +58,18 @@
     <Compile Include="FrmEstudiantes.Designer.cs">
       <DependentUpon>FrmEstudiantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionGrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionGrados.Designer.cs">
+      <DependentUpon>FrmGestionGrados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_EstudiantesGrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EstudiantesGrados.Designer.cs">
+      <DependentUpon>Frm_EstudiantesGrados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgramaPrincipal.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstudiantes.resx">
       <DependentUpon>FrmEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionGrados.resx">
+      <DependentUpon>FrmGestionGrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_EstudiantesGrados.resx">
+      <DependentUpon>Frm_EstudiantesGrados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgramaPrincipal.resx">
       <DependentUpon>ProgramaPrincipal.cs</DependentUpon>

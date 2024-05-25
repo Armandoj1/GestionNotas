@@ -16,16 +16,16 @@ namespace BLL
         public void Conexion()
         {
 
-            if (estado.Conectar() == true)
-            {
-                MessageBox.Show("Conexión abierta", "Estado de conexión", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //if (estado.Conectar() == true)
+            //{
+            //    MessageBox.Show("Conexión abierta", "Estado de conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            else
-            {
-                MessageBox.Show("No se ha podido establecer una conexión en la base de datos.","Estado de conexión", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-                        
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No se ha podido establecer una conexión en la base de datos.", "Estado de conexión", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
+
         }
 
 
