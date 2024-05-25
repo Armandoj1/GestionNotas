@@ -37,5 +37,53 @@ namespace DAL
             }
         }
 
+
+
+
+        public void ModificarGrado(string GradoID, string CC)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("ModificarGrado", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                cmd.Parameters.AddWithValue("@CC", CC);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
+        public void EliminarEstudianteGrado(string CC)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("EliminarEstudianteGrado", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@CC", CC);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

@@ -45,7 +45,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.Btn_Cerrar = new System.Windows.Forms.Button();
-            this.Btn_AsignarGrado = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TxtGradoBuscar = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtGradoID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,7 +154,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(12, 312);
+            this.BtnAgregar.Location = new System.Drawing.Point(12, 356);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(218, 34);
             this.BtnAgregar.TabIndex = 12;
@@ -161,7 +164,7 @@
             // 
             // BtnModificarEstudiante
             // 
-            this.BtnModificarEstudiante.Location = new System.Drawing.Point(12, 352);
+            this.BtnModificarEstudiante.Location = new System.Drawing.Point(12, 396);
             this.BtnModificarEstudiante.Name = "BtnModificarEstudiante";
             this.BtnModificarEstudiante.Size = new System.Drawing.Size(218, 34);
             this.BtnModificarEstudiante.TabIndex = 13;
@@ -188,7 +191,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(12, 392);
+            this.BtnEliminar.Location = new System.Drawing.Point(12, 436);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(218, 34);
             this.BtnEliminar.TabIndex = 16;
@@ -198,7 +201,7 @@
             // 
             // Btn_Cerrar
             // 
-            this.Btn_Cerrar.Location = new System.Drawing.Point(12, 473);
+            this.Btn_Cerrar.Location = new System.Drawing.Point(12, 477);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
             this.Btn_Cerrar.Size = new System.Drawing.Size(218, 34);
             this.Btn_Cerrar.TabIndex = 17;
@@ -206,22 +209,48 @@
             this.Btn_Cerrar.UseVisualStyleBackColor = true;
             this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
             // 
-            // Btn_AsignarGrado
+            // label7
             // 
-            this.Btn_AsignarGrado.Location = new System.Drawing.Point(12, 432);
-            this.Btn_AsignarGrado.Name = "Btn_AsignarGrado";
-            this.Btn_AsignarGrado.Size = new System.Drawing.Size(218, 34);
-            this.Btn_AsignarGrado.TabIndex = 18;
-            this.Btn_AsignarGrado.Text = "Asignar grado";
-            this.Btn_AsignarGrado.UseVisualStyleBackColor = true;
-            this.Btn_AsignarGrado.Click += new System.EventHandler(this.Btn_AsignarGrado_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(539, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 16);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Grado a buscar:";
+            // 
+            // TxtGradoBuscar
+            // 
+            this.TxtGradoBuscar.Location = new System.Drawing.Point(662, 6);
+            this.TxtGradoBuscar.Name = "TxtGradoBuscar";
+            this.TxtGradoBuscar.Size = new System.Drawing.Size(218, 22);
+            this.TxtGradoBuscar.TabIndex = 19;
+            this.TxtGradoBuscar.TextChanged += new System.EventHandler(this.TxtGradoBuscar_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 293);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 16);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Código de grado:";
+            // 
+            // TxtGradoID
+            // 
+            this.TxtGradoID.Location = new System.Drawing.Point(12, 312);
+            this.TxtGradoID.Name = "TxtGradoID";
+            this.TxtGradoID.Size = new System.Drawing.Size(218, 22);
+            this.TxtGradoID.TabIndex = 21;
             // 
             // FrmEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 523);
-            this.Controls.Add(this.Btn_AsignarGrado);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.TxtGradoID);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TxtGradoBuscar);
             this.Controls.Add(this.Btn_Cerrar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label6);
@@ -267,6 +296,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button Btn_Cerrar;
-        private System.Windows.Forms.Button Btn_AsignarGrado;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TxtGradoBuscar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TxtGradoID;
     }
 }

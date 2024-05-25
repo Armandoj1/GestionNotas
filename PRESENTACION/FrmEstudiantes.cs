@@ -17,6 +17,10 @@ namespace PRESENTACION
         B_Estudiantescs BLL = new B_Estudiantescs();
         E_Estudiantes estudiante = new E_Estudiantes();
 
+        E_VincularGrado datos = new E_VincularGrado();
+        B_VincularGrado vincular = new B_VincularGrado();
+
+
         public void MostrarDgv()
         {
             dataGridView1.DataSource = BLL.ConsultarEstudiantes();
@@ -152,12 +156,15 @@ namespace PRESENTACION
                 string direccion = row.Cells["Direccion"].Value.ToString();
                 string telefono = row.Cells["Telefono"].Value.ToString();
 
+
                 // Asigna los valores a los controles correspondientes
                 TxtNombreCompleto.Text = nombre;
                 TxtCC.Text = cc;
                 PickerNacimiento.Value = DateTime.Parse(fechaNacimiento); 
                 TxtDireccion.Text = direccion;
                 TxtTelefono.Text = telefono;
+                
+
             }
         }
 
@@ -204,6 +211,7 @@ namespace PRESENTACION
                 {
                     estudiante.CC = TxtCC.Text;
                     BLL.EliminarEstudiante(estudiante.CC);
+
                     Limpiar();
                     MessageBox.Show("Alumno eliminado con éxito", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     BLL.ConsultarEstudiantes();
@@ -217,36 +225,45 @@ namespace PRESENTACION
                 }
 
             }
+            
+
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                MessageBox.Show("Mensaje: " + ex.Message + "\n\nDetalles del error: " + ex.ToString(), "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+                
             finally
             {
                 TxtCC.Enabled = true;
+                MostrarDgv();
             }
         }
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            try
+           try
             {
-                if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty && TxtTelefono.Text != string.Empty)
-                {
 
+                if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty &&
+                    TxtTelefono.Text != string.Empty && TxtGradoID.Text != string.Empty)
+                {
+                   
                     estudiante.Nombre = TxtNombreCompleto.Text;
                     estudiante.CC = TxtCC.Text;
                     estudiante.FechaNacimiento = PickerNacimiento.Value.Date;
                     estudiante.Direccion = TxtDireccion.Text;
                     estudiante.Telefono = TxtTelefono.Text;
+                    datos.CC1 = estudiante.CC;
+                    datos.GradoID = TxtGradoID.Text;
 
                     string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
 
 
                     BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
+                    vincular.AgregarGrado(datos.CC1, datos.GradoID);
 
                     MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+   
+
                     Limpiar();
 
                 }
@@ -291,7 +308,10 @@ namespace PRESENTACION
 
                         string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
                         BLL.ModificarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
-
+                        if (TxtGradoID.Text != string.Empty)
+                        {
+                            vincular.ModificarGrado(TxtGradoID.Text, TxtCC.Text);
+                        }
                         MessageBox.Show("Estudiante modificado con éxito.", "Mesanje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
                     }
@@ -351,6 +371,12 @@ namespace PRESENTACION
 
                 MessageBox.Show("Erro: ", ex.Message);;
             }
+        }
+
+        private void TxtGradoBuscar_TextChanged(object sender, EventArgs e)
+        {
+            DataTable resultados = BLL.BuscarAlumnoGrado(TxtGradoBuscar.Text);
+            dataGridView1.DataSource = resultados;
         }
     }
 }

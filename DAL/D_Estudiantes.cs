@@ -45,6 +45,32 @@ public class D_Estudiantes
         }
     }
 
+    public DataTable BuscarAlumnoGrado(string Grado)
+    {
+        try
+        {
+            using (SqlCommand command = new SqlCommand("FiltrarAlumnoGrado", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Grado", Grado);
+                connection.Open();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable tabla = new DataTable();
+                dataAdapter.Fill(tabla);
+                return tabla;
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+            if (connection.State == ConnectionState.Open)
+                connection.Close();
+        }
+    }
+
 
 
     public void EliminarEstudiante(string CC)
