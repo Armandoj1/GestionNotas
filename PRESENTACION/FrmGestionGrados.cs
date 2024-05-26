@@ -21,10 +21,17 @@ namespace PRESENTACION
 
         #region "Detalles"
 
+
+
+        public void Formato()
+        {
+            
+        }
         public void MostrarGrados()
         {
 
             dataGridView1.DataSource = grados.MostrarGrados();
+            this.Formato();
         }
 
         public void Limpiar()
@@ -86,6 +93,11 @@ namespace PRESENTACION
         private void Btn_Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmGestionGrados_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

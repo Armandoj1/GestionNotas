@@ -19,9 +19,9 @@ namespace DAL
             try
             {
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("VincularGrado", connection);
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-
+                cmd.Parameters.AddWithValue("@Accion", "Vincular");
                 cmd.Parameters.AddWithValue("@CC", CC);
                 cmd.Parameters.AddWithValue("@GradoID", GradoID);
 
@@ -45,9 +45,9 @@ namespace DAL
             try
             {
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("ModificarGrado", connection);
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-
+                cmd.Parameters.AddWithValue("@Accion", "Modificar");
                 cmd.Parameters.AddWithValue("@GradoID", GradoID);
                 cmd.Parameters.AddWithValue("@CC", CC);
 

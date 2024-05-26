@@ -19,9 +19,9 @@ namespace DAL
             try
             {
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("AgregarGrado", connection);
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-
+                cmd.Parameters.AddWithValue("@Accion", "Insertar");
                 cmd.Parameters.AddWithValue("@GradoID", GradoID);
                 cmd.Parameters.AddWithValue("@NombreGrado", NombreGrado);
 
@@ -43,7 +43,9 @@ namespace DAL
         public DataTable MostrarGrados()
         {
 
-            SqlCommand cmd = new SqlCommand("MostrarGrados", connection);
+            SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Accion", "Mostrar");
             SqlDataAdapter data = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             data.Fill(dataTable);
