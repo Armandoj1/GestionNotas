@@ -23,6 +23,11 @@ namespace BLL
         {
             return estudiante.BuscarAlumno(CC);
         }
+
+        public DataTable BuscarAlumnoGrado(string Grado)
+        {
+            return estudiante.BuscarAlumnoGrado(Grado);
+        }
         public void AgregarEstudiante(string nombre, string CC, DateTime FechaNacimiento, string direccion, string telefono)
         {
          

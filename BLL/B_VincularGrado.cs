@@ -14,5 +14,19 @@ namespace BLL
         {
             vinculo.AgregarGrado(CC, GradoID);
         }
+
+        public void ModificarGrado(string GradoID, string CC)
+        {
+            vinculo.ModificarGrado(GradoID, CC);
+
+        }
+
+        public void EliminarGrado(string CC)
+        {
+            vinculo.EliminarEstudianteGrado(CC);
+        }
+
+
     }
+
 }

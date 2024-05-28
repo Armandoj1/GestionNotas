@@ -33,8 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Rop.Winforms.Icons, Version=1.0.26.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rop.Winforms.Icons.1.0.26\lib\net48\Rop.Winforms.Icons.dll</HintPath>
+    </Reference>
+    <Reference Include="Rop.Winforms.Icons.FontAwesone, Version=1.0.16.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rop.Winforms.Icons.FontAwesone.1.0.16\lib\net48\Rop.Winforms.Icons.FontAwesone.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +56,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -64,19 +77,13 @@
     <Compile Include="FrmGestionGrados.Designer.cs">
       <DependentUpon>FrmGestionGrados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_EstudiantesGrados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_EstudiantesGrados.Designer.cs">
-      <DependentUpon>Frm_EstudiantesGrados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="ProgramaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProgramaPrincipal.Designer.cs">
       <DependentUpon>ProgramaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -86,9 +93,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionGrados.resx">
       <DependentUpon>FrmGestionGrados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_EstudiantesGrados.resx">
-      <DependentUpon>Frm_EstudiantesGrados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgramaPrincipal.resx">
       <DependentUpon>ProgramaPrincipal.cs</DependentUpon>
@@ -102,6 +106,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

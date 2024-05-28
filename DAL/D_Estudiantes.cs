@@ -10,23 +10,66 @@ public class D_Estudiantes
 
     public DataTable ConsultarAlumnos()
     {
-        
-       
-        SqlCommand cmd = new SqlCommand("MostrarAlumnos", connection);
-        SqlDataAdapter data = new SqlDataAdapter(cmd);
-        DataTable dataTable = new DataTable();
-        data.Fill(dataTable);
-        return dataTable;
-        
-    }
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GestionarAlumnos", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "Mostrar"); 
+
+                SqlDataAdapter data = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                data.Fill(dataTable);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al consultar los alumnos." + ex);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
+        }
+
+
+    
     public DataTable BuscarAlumno(string CC)
     {
         try
         {
-            using (SqlCommand command = new SqlCommand("FiltrarAlumno", connection))
+            using (SqlCommand command = new SqlCommand("GestionarAlumnos", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Accion", "FiltrarAlumno");
                 command.Parameters.AddWithValue("@CC", CC);
+                connection.Open();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable tabla = new DataTable();
+                dataAdapter.Fill(tabla);
+                return tabla;
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+            if (connection.State == ConnectionState.Open)
+                connection.Close();
+        }
+    }
+
+    public DataTable BuscarAlumnoGrado(string Grado)
+    {
+        try
+        {
+            using (SqlCommand command = new SqlCommand("GestionarAlumnos", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Grado", Grado);
+                command.Parameters.AddWithValue("@Accion", "FiltrarAlumnoGrado");
                 connection.Open();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 DataTable tabla = new DataTable();
@@ -52,8 +95,9 @@ public class D_Estudiantes
         try
         {
             connection.Open();
-            SqlCommand cmd = new SqlCommand("EliminarEstudiante", connection);
+            SqlCommand cmd = new SqlCommand("GestionarAlumnos", connection);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Accion", "Eliminar");
             cmd.Parameters.AddWithValue("@CC", CC);
             cmd.ExecuteNonQuery();
 
@@ -79,9 +123,9 @@ public class D_Estudiantes
         try
         {
             connection.Open();
-            SqlCommand cmd = new SqlCommand("RegistrarEstudiante", connection);
+            SqlCommand cmd = new SqlCommand("GestionarAlumnos", connection);
             cmd.CommandType = CommandType.StoredProcedure;
-
+            cmd.Parameters.AddWithValue("@Accion", "Registrar");
             cmd.Parameters.AddWithValue("@CC", CC);
             cmd.Parameters.AddWithValue("@Nombre", nombre);
             cmd.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
@@ -106,9 +150,9 @@ public class D_Estudiantes
         try
         {
             connection.Open();
-            SqlCommand cmd = new SqlCommand("ModificarEstudiante", connection);
+            SqlCommand cmd = new SqlCommand("GestionarAlumnos", connection);
             cmd.CommandType = CommandType.StoredProcedure;
-
+            cmd.Parameters.AddWithValue("@Accion", "Modificar");
             cmd.Parameters.AddWithValue("@Nombre", nombre );
             cmd.Parameters.AddWithValue("@CC", CC );
             cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);

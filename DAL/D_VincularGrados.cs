@@ -19,11 +19,11 @@ namespace DAL
             try
             {
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("VincularGrado", connection);
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-
+                cmd.Parameters.AddWithValue("@Accion", "Vincular");
                 cmd.Parameters.AddWithValue("@CC", CC);
-                cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                cmd.Parameters.AddWithValue("@NombreGrado", GradoID);
 
                 cmd.ExecuteNonQuery();
             }
@@ -37,5 +37,53 @@ namespace DAL
             }
         }
 
+
+
+
+        public void ModificarGrado(string GradoID, string CC)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "Modificar");
+                cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                cmd.Parameters.AddWithValue("@CC", CC);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
+        public void EliminarEstudianteGrado(string CC)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("EliminarEstudianteGrado", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@CC", CC);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
