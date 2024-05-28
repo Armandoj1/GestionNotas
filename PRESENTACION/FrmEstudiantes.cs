@@ -65,12 +65,15 @@ namespace PRESENTACION
 
         void Limpiar()
         {
+
             TxtTelefono.Text = "";
             TxtCC.Text = "";
             TxtDireccion.Text = "";
             TxtNombreCompleto.Text = "";
             PickerNacimiento.Text = "";
             CboxGrado.SelectedIndex = 0;
+            TxtCC.Enabled = true;
+
         }
 
         private void TxtTelefono_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -315,7 +318,7 @@ namespace PRESENTACION
 
 
                     BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
-                    vincular.AgregarGrado(datos.CC1, datos.GradoID);
+                    vincular.AgregarGrado(datos.CC1, gradoID);
 
                     MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

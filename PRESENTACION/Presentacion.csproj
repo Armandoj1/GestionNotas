@@ -71,6 +71,12 @@
     <Compile Include="FrmEstudiantes.Designer.cs">
       <DependentUpon>FrmEstudiantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionDocentes.Designer.cs">
+      <DependentUpon>FrmGestionDocentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionGrados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +91,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubMenuRegistrarMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubMenuRegistrarMaterias.Designer.cs">
+      <DependentUpon>SubMenuRegistrarMaterias.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstudiantes.resx">
       <DependentUpon>FrmEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionDocentes.resx">
+      <DependentUpon>FrmGestionDocentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionGrados.resx">
       <DependentUpon>FrmGestionGrados.cs</DependentUpon>
@@ -106,6 +121,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SubMenuRegistrarMaterias.resx">
+      <DependentUpon>SubMenuRegistrarMaterias.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

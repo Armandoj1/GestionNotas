@@ -76,7 +76,29 @@ namespace PRESENTACION
         {
             OpenChildForm(new FrmGestionGrados());
         }
-    
-    
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmGestionDocentes());
+            if(SubMenuMaterias.Visible == true)
+            {
+                SubMenuMaterias.Visible = false;
+            }
+            else
+            {
+                SubMenuMaterias.Visible = true;
+            }
+                      
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SubMenuRegistrarMaterias());
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

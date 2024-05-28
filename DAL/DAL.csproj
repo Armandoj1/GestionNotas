@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="conexion.cs" />
     <Compile Include="D_Estudiantes.cs" />
+    <Compile Include="D_GestionDocentes.cs" />
     <Compile Include="D_Grados.cs" />
+    <Compile Include="D_Materias.cs" />
     <Compile Include="D_VincularGrados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
