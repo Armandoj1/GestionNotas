@@ -23,14 +23,16 @@ namespace BLL
             return grados.MostrarGrados();
 
         }
-
-     
-
-
-
-
-
+        public DataTable ListarGrados()
+        {
+            return grados.ListarGrados();
         }
+
+
+
+
+
+    }
 
 
 

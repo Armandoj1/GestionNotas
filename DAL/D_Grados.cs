@@ -13,8 +13,36 @@ namespace DAL
         static string connectionString = "Data Source=sql.holamundodevs.com;Initial Catalog=Jose_NotasDB;User ID=joserodriguez;Password=Holamundo123*;";
         SqlConnection connection = new SqlConnection(connectionString);
 
+        public DataTable ListarGrados()
+        {
+            DataTable dataTable = new DataTable();
 
-        public void AgregarGrado(string GradoID, string NombreGrado)
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("GestionarAlumnos", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@Accion", "MostrarGrados");
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        adapter.Fill(dataTable);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores (puedes registrar el error o lanzar una excepción)
+                    throw new Exception("Error al obtener los grados: " + ex.Message);
+                }
+            }
+
+            return dataTable;
+        }
+
+
+            public void AgregarGrado(string GradoID, string NombreGrado)
         {
             try
             {

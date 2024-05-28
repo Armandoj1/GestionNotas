@@ -31,35 +31,40 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TxtNombreCompleto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtCC = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Btn_Cerrar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnModificarEstudiante = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.PickerNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.PickerNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnModificarEstudiante = new System.Windows.Forms.Button();
-            this.TxtCCBuscar = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.Btn_Cerrar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtCC = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtGradoBuscar = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtGradoID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtCCBuscar = new System.Windows.Forms.TextBox();
+            this.CboxGrado = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(250, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 99);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1017, 473);
+            this.dataGridView1.Size = new System.Drawing.Size(1188, 625);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -82,179 +87,193 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombre completo:";
             // 
-            // label2
+            // label8
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CC:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(855, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Grado:";
             // 
-            // TxtCC
+            // Btn_Cerrar
             // 
-            this.TxtCC.Location = new System.Drawing.Point(12, 86);
-            this.TxtCC.Name = "TxtCC";
-            this.TxtCC.Size = new System.Drawing.Size(218, 22);
-            this.TxtCC.TabIndex = 3;
-            this.TxtCC.TextChanged += new System.EventHandler(this.TxtCC_TextChanged);
-            this.TxtCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCC_KeyPress);
-            this.TxtCC.Leave += new System.EventHandler(this.TxtCC_Leave);
+            this.Btn_Cerrar.Location = new System.Drawing.Point(1069, 59);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(130, 34);
+            this.Btn_Cerrar.TabIndex = 34;
+            this.Btn_Cerrar.Text = "Cerrar pestaña";
+            this.Btn_Cerrar.UseVisualStyleBackColor = true;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click_1);
             // 
-            // label3
+            // BtnEliminar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Fecha de nacimiento:";
+            this.BtnEliminar.Location = new System.Drawing.Point(317, 59);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(133, 34);
+            this.BtnEliminar.TabIndex = 33;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click_1);
             // 
-            // label4
+            // BtnModificarEstudiante
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 190);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Dirección:";
-            // 
-            // TxtDireccion
-            // 
-            this.TxtDireccion.Location = new System.Drawing.Point(12, 209);
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(218, 22);
-            this.TxtDireccion.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 245);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Teléfono";
-            // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Location = new System.Drawing.Point(12, 264);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(218, 22);
-            this.TxtTelefono.TabIndex = 9;
-            this.TxtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
-            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
-            this.TxtTelefono.Leave += new System.EventHandler(this.TxtTelefono_Leave);
-            // 
-            // PickerNacimiento
-            // 
-            this.PickerNacimiento.Location = new System.Drawing.Point(12, 157);
-            this.PickerNacimiento.Name = "PickerNacimiento";
-            this.PickerNacimiento.Size = new System.Drawing.Size(218, 22);
-            this.PickerNacimiento.TabIndex = 11;
+            this.BtnModificarEstudiante.Location = new System.Drawing.Point(165, 59);
+            this.BtnModificarEstudiante.Name = "BtnModificarEstudiante";
+            this.BtnModificarEstudiante.Size = new System.Drawing.Size(133, 34);
+            this.BtnModificarEstudiante.TabIndex = 32;
+            this.BtnModificarEstudiante.Text = "Modificar";
+            this.BtnModificarEstudiante.UseVisualStyleBackColor = true;
+            this.BtnModificarEstudiante.Click += new System.EventHandler(this.BtnModificarEstudiante_Click_1);
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(12, 356);
+            this.BtnAgregar.Location = new System.Drawing.Point(12, 59);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(218, 34);
-            this.BtnAgregar.TabIndex = 12;
+            this.BtnAgregar.Size = new System.Drawing.Size(133, 34);
+            this.BtnAgregar.TabIndex = 31;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // BtnModificarEstudiante
+            // PickerNacimiento
             // 
-            this.BtnModificarEstudiante.Location = new System.Drawing.Point(12, 396);
-            this.BtnModificarEstudiante.Name = "BtnModificarEstudiante";
-            this.BtnModificarEstudiante.Size = new System.Drawing.Size(218, 34);
-            this.BtnModificarEstudiante.TabIndex = 13;
-            this.BtnModificarEstudiante.Text = "Modificar";
-            this.BtnModificarEstudiante.UseVisualStyleBackColor = true;
-            this.BtnModificarEstudiante.Click += new System.EventHandler(this.BtnModificarEstudiante_Click);
+            this.PickerNacimiento.Location = new System.Drawing.Point(982, 31);
+            this.PickerNacimiento.Name = "PickerNacimiento";
+            this.PickerNacimiento.Size = new System.Drawing.Size(218, 22);
+            this.PickerNacimiento.TabIndex = 30;
             // 
-            // TxtCCBuscar
+            // label5
             // 
-            this.TxtCCBuscar.Location = new System.Drawing.Point(1049, 6);
-            this.TxtCCBuscar.Name = "TxtCCBuscar";
-            this.TxtCCBuscar.Size = new System.Drawing.Size(218, 22);
-            this.TxtCCBuscar.TabIndex = 14;
-            this.TxtCCBuscar.TextChanged += new System.EventHandler(this.TxtCCBuscar_TextChanged);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(667, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 16);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Teléfono";
             // 
-            // label6
+            // TxtTelefono
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(926, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 16);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Cédula a buscar:";
+            this.TxtTelefono.Location = new System.Drawing.Point(670, 31);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(169, 22);
+            this.TxtTelefono.TabIndex = 28;
+            this.TxtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress_1);
+            this.TxtTelefono.Leave += new System.EventHandler(this.TxtTelefono_Leave);
             // 
-            // BtnEliminar
+            // label4
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(12, 436);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(218, 34);
-            this.BtnEliminar.TabIndex = 16;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(443, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Dirección:";
             // 
-            // Btn_Cerrar
+            // TxtDireccion
             // 
-            this.Btn_Cerrar.Location = new System.Drawing.Point(12, 477);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(218, 34);
-            this.Btn_Cerrar.TabIndex = 17;
-            this.Btn_Cerrar.Text = "Cerrar pestaña";
-            this.Btn_Cerrar.UseVisualStyleBackColor = true;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
+            this.TxtDireccion.Location = new System.Drawing.Point(446, 31);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(218, 22);
+            this.TxtDireccion.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(979, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 16);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Fecha de nacimiento:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(258, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 16);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "CC:";
+            // 
+            // TxtCC
+            // 
+            this.TxtCC.Location = new System.Drawing.Point(261, 31);
+            this.TxtCC.Name = "TxtCC";
+            this.TxtCC.Size = new System.Drawing.Size(161, 22);
+            this.TxtCC.TabIndex = 23;
+            this.TxtCC.TextChanged += new System.EventHandler(this.TxtCC_TextChanged_1);
+            this.TxtCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCC_KeyPress_1);
+            this.TxtCC.Leave += new System.EventHandler(this.TxtCC_Leave_1);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(539, 9);
+            this.label7.Location = new System.Drawing.Point(27, 733);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 16);
-            this.label7.TabIndex = 20;
+            this.label7.TabIndex = 40;
             this.label7.Text = "Grado a buscar:";
             // 
             // TxtGradoBuscar
             // 
-            this.TxtGradoBuscar.Location = new System.Drawing.Point(662, 6);
+            this.TxtGradoBuscar.Location = new System.Drawing.Point(165, 730);
             this.TxtGradoBuscar.Name = "TxtGradoBuscar";
-            this.TxtGradoBuscar.Size = new System.Drawing.Size(218, 22);
-            this.TxtGradoBuscar.TabIndex = 19;
-            this.TxtGradoBuscar.TextChanged += new System.EventHandler(this.TxtGradoBuscar_TextChanged);
+            this.TxtGradoBuscar.Size = new System.Drawing.Size(152, 22);
+            this.TxtGradoBuscar.TabIndex = 39;
+            this.TxtGradoBuscar.TextChanged += new System.EventHandler(this.TxtGradoBuscar_TextChanged_1);
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 293);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 16);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Código de grado:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(414, 733);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 16);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Cédula a buscar:";
             // 
-            // TxtGradoID
+            // TxtCCBuscar
             // 
-            this.TxtGradoID.Location = new System.Drawing.Point(12, 312);
-            this.TxtGradoID.Name = "TxtGradoID";
-            this.TxtGradoID.Size = new System.Drawing.Size(218, 22);
-            this.TxtGradoID.TabIndex = 21;
+            this.TxtCCBuscar.Location = new System.Drawing.Point(550, 730);
+            this.TxtCCBuscar.Name = "TxtCCBuscar";
+            this.TxtCCBuscar.Size = new System.Drawing.Size(157, 22);
+            this.TxtCCBuscar.TabIndex = 37;
+            this.TxtCCBuscar.TextChanged += new System.EventHandler(this.TxtCCBuscar_TextChanged_1);
+            // 
+            // CboxGrado
+            // 
+            this.CboxGrado.FormattingEnabled = true;
+            this.CboxGrado.Location = new System.Drawing.Point(858, 31);
+            this.CboxGrado.Name = "CboxGrado";
+            this.CboxGrado.Size = new System.Drawing.Size(114, 24);
+            this.CboxGrado.TabIndex = 42;
+            this.CboxGrado.Click += new System.EventHandler(this.CboxGrado_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(689, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 34);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Limpiar casillas ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 523);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.TxtGradoID);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1211, 779);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CboxGrado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtGradoBuscar);
-            this.Controls.Add(this.Btn_Cerrar);
-            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtCCBuscar);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Btn_Cerrar);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnModificarEstudiante);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.PickerNacimiento);
@@ -282,23 +301,24 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox TxtNombreCompleto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtCC;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button Btn_Cerrar;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button BtnModificarEstudiante;
+        private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.DateTimePicker PickerNacimiento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtTelefono;
-        private System.Windows.Forms.DateTimePicker PickerNacimiento;
-        private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Button BtnModificarEstudiante;
-        private System.Windows.Forms.TextBox TxtCCBuscar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button Btn_Cerrar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtCC;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtGradoBuscar;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtGradoID;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TxtCCBuscar;
+        private System.Windows.Forms.ComboBox CboxGrado;
+        private System.Windows.Forms.Button button1;
     }
 }

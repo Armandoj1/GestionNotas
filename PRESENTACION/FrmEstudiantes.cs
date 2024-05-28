@@ -19,37 +19,44 @@ namespace PRESENTACION
 
         E_VincularGrado datos = new E_VincularGrado();
         B_VincularGrado vincular = new B_VincularGrado();
-
+        B_Grados grados = new B_Grados();
 
         public void MostrarDgv()
         {
             dataGridView1.DataSource = BLL.ConsultarEstudiantes();
             this.FormatoEstudiantes();
+            LoadComboBoxData();
 
         }
 
 
         public void FormatoEstudiantes()
         {
+
             dataGridView1.Columns[0].HeaderText = "Cédula";
+            dataGridView1.Columns[0].Width = 125;
             dataGridView1.Columns[1].HeaderText = "Nombre";
-            dataGridView1.Columns[1].Width = 160;
+            dataGridView1.Columns[1].Width = 270;
             dataGridView1.Columns[2].HeaderText = "Fecha de nacimiento";
+            dataGridView1.Columns[2].Width = 190;
             dataGridView1.Columns[3].HeaderText = "Dirección";
+            dataGridView1.Columns[3].Width = 170;
             dataGridView1.Columns[4].HeaderText = "Teléfono";
+            dataGridView1.Columns[4].Width = 115;
             dataGridView1.Columns[5].HeaderText = "Grado";
-            dataGridView1.Columns[5].Width = 60;
+            dataGridView1.Columns[5].Width = 75;
             dataGridView1.Columns[6].HeaderText = "Fecha de inclusión";
-            dataGridView1.Columns[6].Width = 90;
+            dataGridView1.Columns[6].Width = 190;
 
         }
-     
+
 
         public FrmEstudiantes()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             MostrarDgv();
+            this.FormatoEstudiantes();
 
         }
         #region "Controles de textbox"
@@ -63,17 +70,15 @@ namespace PRESENTACION
             TxtDireccion.Text = "";
             TxtNombreCompleto.Text = "";
             PickerNacimiento.Text = "";
+            CboxGrado.SelectedIndex = 0;
         }
-        
-        
-        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
 
+        private void TxtTelefono_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-
         }
         private void TxtTelefono_TextChanged(object sender, EventArgs e)
         {
@@ -84,6 +89,7 @@ namespace PRESENTACION
             }
         }
 
+
         private void TxtTelefono_Leave(object sender, EventArgs e)
         {
             if (TxtTelefono.Text.Length > 10)
@@ -93,42 +99,36 @@ namespace PRESENTACION
                 TxtTelefono.Focus();
 
             }
-
         }
 
 
-        private void TxtCC_TextChanged(object sender, EventArgs e)
+        private void TxtCC_TextChanged_1(object sender, EventArgs e)
         {
             if (TxtCC.Text.Length > 10)
             {
                 TxtCC.Text = TxtCC.Text.Substring(0, 10);
                 TxtCC.SelectionStart = TxtCC.Text.Length;
             }
-            
+
 
         }
-
-        private void TxtCC_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtCC_KeyPress_1(object sender, KeyPressEventArgs e)
         {
 
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-
         }
-
-        private void TxtCC_Leave(object sender, EventArgs e)
+        private void TxtCC_Leave_1(object sender, EventArgs e)
         {
-            if(TxtCC.Text.Length > 10)
+
+            if (TxtCC.Text.Length > 10)
             {
                 MessageBox.Show("La cédula no puede exceder los 10 caracteres.");
                 TxtCC.Focus();
             }
-
-
         }
-
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -155,15 +155,16 @@ namespace PRESENTACION
                 string fechaNacimiento = row.Cells["FechaNacimiento"].Value.ToString();
                 string direccion = row.Cells["Direccion"].Value.ToString();
                 string telefono = row.Cells["Telefono"].Value.ToString();
-
+                string grado = row.Cells["NombreGrado"].Value.ToString();
 
                 // Asigna los valores a los controles correspondientes
                 TxtNombreCompleto.Text = nombre;
                 TxtCC.Text = cc;
-                PickerNacimiento.Value = DateTime.Parse(fechaNacimiento); 
+                PickerNacimiento.Value = DateTime.Parse(fechaNacimiento);
                 TxtDireccion.Text = direccion;
                 TxtTelefono.Text = telefono;
-                
+                CboxGrado.Text = grado; 
+
 
             }
         }
@@ -194,15 +195,9 @@ namespace PRESENTACION
 
         }
 
-        private void TxtCCBuscar_TextChanged(object sender, EventArgs e)
-        {
-            DataTable resultados = BLL.BuscarAlumno(TxtCCBuscar.Text);
-            dataGridView1.DataSource = resultados;
-        }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
         {
-
             try
             {
                 DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este alumno de la base de datos?", "Mensaje de confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -225,77 +220,28 @@ namespace PRESENTACION
                 }
 
             }
-            
+
 
             catch (Exception ex)
             {
                 MessageBox.Show("Mensaje: " + ex.Message + "\n\nDetalles del error: " + ex.ToString(), "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-                
+
             finally
             {
                 TxtCC.Enabled = true;
                 MostrarDgv();
             }
         }
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-           try
-            {
 
-                if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty &&
-                    TxtTelefono.Text != string.Empty && TxtGradoID.Text != string.Empty)
-                {
-                   
-                    estudiante.Nombre = TxtNombreCompleto.Text;
-                    estudiante.CC = TxtCC.Text;
-                    estudiante.FechaNacimiento = PickerNacimiento.Value.Date;
-                    estudiante.Direccion = TxtDireccion.Text;
-                    estudiante.Telefono = TxtTelefono.Text;
-                    datos.CC1 = estudiante.CC;
-                    datos.GradoID = TxtGradoID.Text;
-
-                    string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
-
-
-                    BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
-                    vincular.AgregarGrado(datos.CC1, datos.GradoID);
-
-                    MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-   
-
-                    Limpiar();
-
-                }
-                else
-                {
-
-                    MessageBox.Show("¡Aún tienes datos que llenar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);   
-
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al agregar estudiante: " + ex.Message);
-
-            }
-            finally
-            {
-                MostrarDgv();   
-            }
-        }
-
-
-
-        private void BtnModificarEstudiante_Click(object sender, EventArgs e)
+        private void BtnModificarEstudiante_Click_1(object sender, EventArgs e)
         {
             try
             {
                 if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty && TxtTelefono.Text != string.Empty)
                 {
 
-                    DialogResult resultado = MessageBox.Show("¿Está seguro que desea modificar esta información del alumno?", "Mensaje de confirmación", MessageBoxButtons.YesNo, 
+                    DialogResult resultado = MessageBox.Show("¿Está seguro que desea modificar esta información del alumno?", "Mensaje de confirmación", MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question);
 
                     if (resultado == DialogResult.Yes)
@@ -308,9 +254,11 @@ namespace PRESENTACION
 
                         string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
                         BLL.ModificarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
-                        if (TxtGradoID.Text != string.Empty)
+                        if (CboxGrado.SelectedValue != null)
                         {
-                            vincular.ModificarGrado(TxtGradoID.Text, TxtCC.Text);
+                            // Obtener el GradoID seleccionado
+                            string gradoID = Convert.ToString(CboxGrado.SelectedValue);
+                            vincular.ModificarGrado(gradoID, TxtCC.Text);
                         }
                         MessageBox.Show("Estudiante modificado con éxito.", "Mesanje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
@@ -326,7 +274,7 @@ namespace PRESENTACION
                 {
 
                     MessageBox.Show("Todos los campos deben estar llenos para poder modificar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    
+
                 }
 
 
@@ -334,49 +282,111 @@ namespace PRESENTACION
             catch (Exception ex)
             {
 
-                    MessageBox.Show("Error al modificar el estudiante: ", ex.Message);
-                }
-                finally
-                {
-                    MostrarDgv();
-                    TxtCC.Enabled = true;
-                }
-
-
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MostrarDgv();
+                TxtCC.Enabled = true;
             }
 
 
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty &&
+                    TxtTelefono.Text != string.Empty && CboxGrado.Text != string.Empty)
+                {
+
+                    estudiante.Nombre = TxtNombreCompleto.Text;
+                    estudiante.CC = TxtCC.Text;
+                    estudiante.FechaNacimiento = PickerNacimiento.Value.Date;
+                    estudiante.Direccion = TxtDireccion.Text;
+                    estudiante.Telefono = TxtTelefono.Text;
+                    datos.CC1 = estudiante.CC;
+                    string gradoID = Convert.ToString(CboxGrado.SelectedValue);
+                    datos.GradoID = gradoID;
+
+                    string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
 
 
+                    BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
+                    vincular.AgregarGrado(datos.CC1, datos.GradoID);
 
+                    MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    Limpiar();
+
+                }
+                else
+                {
+
+                    MessageBox.Show("¡Aún tienes datos que llenar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al agregar estudiante: " + ex.Message);
+
+            }
+            finally
+            {
+                MostrarDgv();
+            }
+        }
 
         #endregion
 
-        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        private void Btn_Cerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Btn_AsignarGrado_Click(object sender, EventArgs e)
+        private void TxtGradoBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            DataTable resultados = BLL.BuscarAlumnoGrado(TxtGradoBuscar.Text);
+            dataGridView1.DataSource = resultados;
+        }
+
+        private void TxtCCBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            DataTable resultados = BLL.BuscarAlumno(TxtCCBuscar.Text);
+            dataGridView1.DataSource = resultados;
+        }
+
+        private void CboxGrado_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LoadComboBoxData()
         {
             try
             {
-                Frm_EstudiantesGrados ventana = new Frm_EstudiantesGrados();
-                ventana.ShowDialog();
+                DataTable dataTable = grados.ListarGrados();
+                CboxGrado.DataSource = dataTable;
+                CboxGrado.DisplayMember = "NombreGrado"; // La columna que se muestra en el ComboBox
+                CboxGrado.ValueMember = "GradoID"; // El valor que se asocia con cada ítem (puedes cambiar esto según lo que necesites)
 
 
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Erro: ", ex.Message);;
+                MessageBox.Show(ex.Message);
             }
         }
+        
 
-        private void TxtGradoBuscar_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            DataTable resultados = BLL.BuscarAlumnoGrado(TxtGradoBuscar.Text);
-            dataGridView1.DataSource = resultados;
+            Limpiar();
         }
     }
 }
