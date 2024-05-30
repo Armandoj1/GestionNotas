@@ -45,9 +45,9 @@
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtBuscarCC = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtBuscarEspecialidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,12 +64,14 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1194, 610);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // TxtNombre
             // 
             this.TxtNombre.Location = new System.Drawing.Point(12, 39);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(156, 22);
+            this.TxtNombre.Size = new System.Drawing.Size(249, 22);
             this.TxtNombre.TabIndex = 1;
             // 
             // label1
@@ -77,14 +79,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(121, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Nombre:";
+            this.label1.Text = "Nombre completo: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(190, 19);
+            this.label2.Location = new System.Drawing.Point(292, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 4;
@@ -92,15 +94,17 @@
             // 
             // TxtCC
             // 
-            this.TxtCC.Location = new System.Drawing.Point(187, 39);
+            this.TxtCC.Location = new System.Drawing.Point(289, 39);
             this.TxtCC.Name = "TxtCC";
             this.TxtCC.Size = new System.Drawing.Size(156, 22);
             this.TxtCC.TabIndex = 3;
+            this.TxtCC.TextChanged += new System.EventHandler(this.TxtCC_TextChanged);
+            this.TxtCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCC_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(355, 19);
+            this.label3.Location = new System.Drawing.Point(457, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 16);
             this.label3.TabIndex = 6;
@@ -108,7 +112,7 @@
             // 
             // PickerNacimiento
             // 
-            this.PickerNacimiento.Location = new System.Drawing.Point(358, 39);
+            this.PickerNacimiento.Location = new System.Drawing.Point(460, 39);
             this.PickerNacimiento.Name = "PickerNacimiento";
             this.PickerNacimiento.Size = new System.Drawing.Size(171, 22);
             this.PickerNacimiento.TabIndex = 7;
@@ -116,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(549, 19);
+            this.label4.Location = new System.Drawing.Point(994, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 9;
@@ -124,7 +128,7 @@
             // 
             // TxtDireccion
             // 
-            this.TxtDireccion.Location = new System.Drawing.Point(546, 39);
+            this.TxtDireccion.Location = new System.Drawing.Point(991, 39);
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(156, 22);
             this.TxtDireccion.TabIndex = 8;
@@ -132,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(714, 19);
+            this.label5.Location = new System.Drawing.Point(816, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 11;
@@ -140,15 +144,16 @@
             // 
             // TxtEspecialidad
             // 
-            this.TxtEspecialidad.Location = new System.Drawing.Point(717, 39);
+            this.TxtEspecialidad.Location = new System.Drawing.Point(819, 39);
             this.TxtEspecialidad.Name = "TxtEspecialidad";
             this.TxtEspecialidad.Size = new System.Drawing.Size(156, 22);
             this.TxtEspecialidad.TabIndex = 10;
+            this.TxtEspecialidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEspecialidad_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(893, 19);
+            this.label6.Location = new System.Drawing.Point(651, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 13;
@@ -156,10 +161,12 @@
             // 
             // TxtTelefono
             // 
-            this.TxtTelefono.Location = new System.Drawing.Point(890, 39);
+            this.TxtTelefono.Location = new System.Drawing.Point(648, 39);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(156, 22);
             this.TxtTelefono.TabIndex = 12;
+            this.TxtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // BtnAgregar
             // 
@@ -179,6 +186,7 @@
             this.BtnModificar.TabIndex = 17;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
             // 
@@ -188,6 +196,7 @@
             this.BtnEliminar.TabIndex = 18;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // label8
             // 
@@ -198,28 +207,30 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Cédula:";
             // 
-            // textBox1
+            // TxtBuscarCC
             // 
-            this.textBox1.Location = new System.Drawing.Point(365, 730);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 22);
-            this.textBox1.TabIndex = 21;
+            this.TxtBuscarCC.Location = new System.Drawing.Point(365, 730);
+            this.TxtBuscarCC.Name = "TxtBuscarCC";
+            this.TxtBuscarCC.Size = new System.Drawing.Size(156, 22);
+            this.TxtBuscarCC.TabIndex = 21;
+            this.TxtBuscarCC.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(22, 733);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 16);
+            this.label9.Size = new System.Drawing.Size(90, 16);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Nombre:";
+            this.label9.Text = "Especialidad:";
             // 
-            // textBox2
+            // TxtBuscarEspecialidad
             // 
-            this.textBox2.Location = new System.Drawing.Point(87, 730);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 22);
-            this.textBox2.TabIndex = 19;
+            this.TxtBuscarEspecialidad.Location = new System.Drawing.Point(129, 730);
+            this.TxtBuscarEspecialidad.Name = "TxtBuscarEspecialidad";
+            this.TxtBuscarEspecialidad.Size = new System.Drawing.Size(132, 22);
+            this.TxtBuscarEspecialidad.TabIndex = 19;
+            this.TxtBuscarEspecialidad.TextChanged += new System.EventHandler(this.TxtBuscarEspecialidad_TextChanged);
             // 
             // FrmGestionDocentes
             // 
@@ -227,9 +238,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 776);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtBuscarCC);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtBuscarEspecialidad);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.BtnAgregar);
@@ -274,8 +285,8 @@
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtBuscarCC;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtBuscarEspecialidad;
     }
 }

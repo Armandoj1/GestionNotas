@@ -19,7 +19,7 @@ namespace DAL
             try
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("GestionarGrados", connection);
+                SqlCommand command = new SqlCommand("GestionarAlumnos", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@Accion", "MostrarGrados");
 

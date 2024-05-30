@@ -314,7 +314,7 @@ namespace PRESENTACION
                     string gradoID = Convert.ToString(CboxGrado.SelectedValue);
                     datos.GradoID = gradoID;
 
-                    string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
+                    string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");     
 
 
                     BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);

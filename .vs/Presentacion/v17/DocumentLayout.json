@@ -3,44 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\submenuregistrarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\submenuregistrarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\submenuasignarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\submenuasignarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\submenuregistrarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\submenuregistrarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\submenuasignarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\submenuasignarmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\dal\\d_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\bll\\b_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|solutionrelative:bll\\b_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\bll\\b_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\bll\\b_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|solutionrelative:bll\\b_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B0DBA69-C131-4F62-8EEB-F60FB54F0A03}|ENTITY\\Entity.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\entity\\e_docentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B0DBA69-C131-4F62-8EEB-F60FB54F0A03}|ENTITY\\Entity.csproj|solutionrelative:entity\\e_docentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\dal\\d_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\dal\\d_grados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_grados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\submenucrearmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\submenucrearmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\submenucrearmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\submenucrearmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\frmgestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\bll\\b_grados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|solutionrelative:bll\\b_grados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\dal\\d_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\programaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\frmestudiantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,31 +63,47 @@
       "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\frmestudiantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B0DBA69-C131-4F62-8EEB-F60FB54F0A03}|ENTITY\\Entity.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\entity\\e_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\bll\\b_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|solutionrelative:bll\\b_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B0DBA69-C131-4F62-8EEB-F60FB54F0A03}|ENTITY\\Entity.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\entity\\e_docentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B0DBA69-C131-4F62-8EEB-F60FB54F0A03}|ENTITY\\Entity.csproj|solutionrelative:entity\\e_docentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B0DBA69-C131-4F62-8EEB-F60FB54F0A03}|ENTITY\\Entity.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\entity\\e_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B0DBA69-C131-4F62-8EEB-F60FB54F0A03}|ENTITY\\Entity.csproj|solutionrelative:entity\\e_materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\dal\\d_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_gestiondocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\dal\\d_grados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_grados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\dal\\d_vinculargrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_vinculargrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\dal\\d_estudiantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\dal\\d_estudiantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_estudiantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\bll\\b_vinculargrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F57F4B69-2370-4A37-A28D-E214084C3890}|BLL\\BLL.csproj|solutionrelative:bll\\b_vinculargrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\submenuasignarmaterias.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\submenuasignarmaterias.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\dal\\d_vinculargrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{214CDF4D-5180-4754-AA0C-F4FF848D8BE9}|DAL\\DAL.csproj|solutionrelative:dal\\d_vinculargrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\presentacion\\frmgestiongrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\frmgestiongrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\presentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|c:\\users\\jos\u00E9 a. rodr\u00EDguez\\source\\repos\\gestionnotas\\gestionnotas\\presentacion\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\presentacion\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{E35A98E4-82E1-4FB8-B440-503FEA011694}|PRESENTACION\\Presentacion.csproj|solutionrelative:presentacion\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -90,175 +118,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProgramaPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\ProgramaPrincipal.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
-              "RelativeToolTip": "PRESENTACION\\ProgramaPrincipal.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T10:13:03.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmGestionDocentes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\FrmGestionDocentes.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PRESENTACION\\FrmGestionDocentes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T10:14:56.244Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmGestionDocentes.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\FrmGestionDocentes.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs",
-              "RelativeToolTip": "PRESENTACION\\FrmGestionDocentes.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T10:50:47.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SubMenuRegistrarMaterias.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuRegistrarMaterias.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\SubMenuRegistrarMaterias.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuRegistrarMaterias.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PRESENTACION\\SubMenuRegistrarMaterias.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T12:23:09.233Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SubMenuRegistrarMaterias.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuRegistrarMaterias.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\SubMenuRegistrarMaterias.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuRegistrarMaterias.cs",
-              "RelativeToolTip": "PRESENTACION\\SubMenuRegistrarMaterias.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T12:40:07.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProgramaPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\ProgramaPrincipal.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PRESENTACION\\ProgramaPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T10:04:37.342Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "D_Materias.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_Materias.cs",
-              "RelativeDocumentMoniker": "DAL\\D_Materias.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_Materias.cs",
-              "RelativeToolTip": "DAL\\D_Materias.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T17:57:42.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "B_GestionDocentes.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_GestionDocentes.cs",
-              "RelativeDocumentMoniker": "BLL\\B_GestionDocentes.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_GestionDocentes.cs",
-              "RelativeToolTip": "BLL\\B_GestionDocentes.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T17:12:48.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "B_Materias.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_Materias.cs",
-              "RelativeDocumentMoniker": "BLL\\B_Materias.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_Materias.cs",
-              "RelativeToolTip": "BLL\\B_Materias.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T18:04:34.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "E_Docentes.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Docentes.cs",
-              "RelativeDocumentMoniker": "ENTITY\\E_Docentes.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Docentes.cs",
-              "RelativeToolTip": "ENTITY\\E_Docentes.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T17:15:37.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FrmEstudiantes.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\FrmEstudiantes.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs",
-              "RelativeToolTip": "PRESENTACION\\FrmEstudiantes.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T12:40:11.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FrmEstudiantes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs",
-              "RelativeDocumentMoniker": "PRESENTACION\\FrmEstudiantes.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PRESENTACION\\FrmEstudiantes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T10:04:18.955Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "E_Materias.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Materias.cs",
-              "RelativeDocumentMoniker": "ENTITY\\E_Materias.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Materias.cs",
-              "RelativeToolTip": "ENTITY\\E_Materias.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T18:06:50.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "D_GestionDocentes.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_GestionDocentes.cs",
-              "RelativeDocumentMoniker": "DAL\\D_GestionDocentes.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_GestionDocentes.cs",
-              "RelativeToolTip": "DAL\\D_GestionDocentes.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T16:49:29.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "D_Grados.cs",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_Grados.cs",
               "RelativeDocumentMoniker": "DAL\\D_Grados.cs",
@@ -270,19 +130,211 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "D_VincularGrados.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_VincularGrados.cs",
-              "RelativeDocumentMoniker": "DAL\\D_VincularGrados.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_VincularGrados.cs",
-              "RelativeToolTip": "DAL\\D_VincularGrados.cs",
+              "DocumentIndex": 3,
+              "Title": "D_Materias.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_Materias.cs",
+              "RelativeDocumentMoniker": "DAL\\D_Materias.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_Materias.cs",
+              "RelativeToolTip": "DAL\\D_Materias.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T12:53:31.349Z",
+              "WhenOpened": "2024-05-28T17:57:42.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "B_Materias.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_Materias.cs",
+              "RelativeDocumentMoniker": "BLL\\B_Materias.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_Materias.cs",
+              "RelativeToolTip": "BLL\\B_Materias.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T18:04:34.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SubMenuAsignarMaterias.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuAsignarMaterias.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\SubMenuAsignarMaterias.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuAsignarMaterias.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PRESENTACION\\SubMenuAsignarMaterias.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T12:23:09.233Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubMenuAsignarMaterias.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuAsignarMaterias.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\SubMenuAsignarMaterias.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuAsignarMaterias.cs",
+              "RelativeToolTip": "PRESENTACION\\SubMenuAsignarMaterias.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T12:40:07.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SubMenuCrearMaterias.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuCrearMaterias.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\SubMenuCrearMaterias.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuCrearMaterias.cs",
+              "RelativeToolTip": "PRESENTACION\\SubMenuCrearMaterias.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T22:36:22.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SubMenuCrearMaterias.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuCrearMaterias.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\SubMenuCrearMaterias.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuCrearMaterias.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PRESENTACION\\SubMenuCrearMaterias.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T22:28:25.051Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmGestionDocentes.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\FrmGestionDocentes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs",
+              "RelativeToolTip": "PRESENTACION\\FrmGestionDocentes.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:50:47.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmGestionDocentes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\FrmGestionDocentes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionDocentes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PRESENTACION\\FrmGestionDocentes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:14:56.244Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "B_Grados.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_Grados.cs",
+              "RelativeDocumentMoniker": "BLL\\B_Grados.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_Grados.cs",
+              "RelativeToolTip": "BLL\\B_Grados.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T22:43:15.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "D_GestionDocentes.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_GestionDocentes.cs",
+              "RelativeDocumentMoniker": "DAL\\D_GestionDocentes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_GestionDocentes.cs",
+              "RelativeToolTip": "DAL\\D_GestionDocentes.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T16:49:29.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProgramaPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\ProgramaPrincipal.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
+              "RelativeToolTip": "PRESENTACION\\ProgramaPrincipal.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:13:03.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProgramaPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\ProgramaPrincipal.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\ProgramaPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PRESENTACION\\ProgramaPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:04:37.342Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FrmEstudiantes.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\FrmEstudiantes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs",
+              "RelativeToolTip": "PRESENTACION\\FrmEstudiantes.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T12:40:11.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FrmEstudiantes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\FrmEstudiantes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmEstudiantes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PRESENTACION\\FrmEstudiantes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:04:18.955Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "E_Docentes.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Docentes.cs",
+              "RelativeDocumentMoniker": "ENTITY\\E_Docentes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Docentes.cs",
+              "RelativeToolTip": "ENTITY\\E_Docentes.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T17:15:37.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "B_GestionDocentes.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_GestionDocentes.cs",
+              "RelativeDocumentMoniker": "BLL\\B_GestionDocentes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_GestionDocentes.cs",
+              "RelativeToolTip": "BLL\\B_GestionDocentes.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T17:12:48.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\conexion.cs",
+              "RelativeDocumentMoniker": "DAL\\conexion.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\conexion.cs",
+              "RelativeToolTip": "DAL\\conexion.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T02:36:29.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "D_Estudiantes.cs",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_Estudiantes.cs",
               "RelativeDocumentMoniker": "DAL\\D_Estudiantes.cs",
@@ -294,7 +346,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
+              "Title": "B_VincularGrado.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_VincularGrado.cs",
+              "RelativeDocumentMoniker": "BLL\\B_VincularGrado.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\BLL\\B_VincularGrado.cs",
+              "RelativeToolTip": "BLL\\B_VincularGrado.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:36:26.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "E_Materias.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Materias.cs",
+              "RelativeDocumentMoniker": "ENTITY\\E_Materias.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\ENTITY\\E_Materias.cs",
+              "RelativeToolTip": "ENTITY\\E_Materias.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T18:06:50.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SubMenuAsignarMaterias.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuAsignarMaterias.Designer.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\SubMenuAsignarMaterias.Designer.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\SubMenuAsignarMaterias.Designer.cs",
+              "RelativeToolTip": "PRESENTACION\\SubMenuAsignarMaterias.Designer.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:57:46.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "D_VincularGrados.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_VincularGrados.cs",
+              "RelativeDocumentMoniker": "DAL\\D_VincularGrados.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\DAL\\D_VincularGrados.cs",
+              "RelativeToolTip": "DAL\\D_VincularGrados.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T12:53:31.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FrmGestionGrados.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionGrados.cs",
+              "RelativeDocumentMoniker": "PRESENTACION\\FrmGestionGrados.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\FrmGestionGrados.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PRESENTACION\\FrmGestionGrados.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T18:41:14.503Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\App.config",
               "RelativeDocumentMoniker": "PRESENTACION\\App.config",
@@ -306,15 +418,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\packages.config",
               "RelativeDocumentMoniker": "PRESENTACION\\packages.config",
               "ToolTip": "C:\\Users\\Jos\u00E9 A. Rodr\u00EDguez\\source\\repos\\GestionNotas\\GestionNotas\\PRESENTACION\\packages.config",
               "RelativeToolTip": "PRESENTACION\\packages.config",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-28T10:17:57.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T10:17:57.468Z"
             }
           ]
         }

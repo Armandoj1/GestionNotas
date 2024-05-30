@@ -15,7 +15,7 @@ namespace DAL
         SqlConnection connection = new SqlConnection(connectionString);
 
 
-        public void AgregarDocente(string Nombre, string CC, DateTime FechaNacimiento, string Telefono, string Especialidad, string Direccion)
+        public void AgregarDocente(string Nombre, string CC, DateTime FechaNacimiento, string Direccion, string Especialidad, string Telefono)
         {
             try
             {           
@@ -42,6 +42,40 @@ namespace DAL
             finally
             {
                 connection.Close();
+            }
+        }
+
+        public void ModificarDocente(String CC, string Nombre, DateTime FechaNacimiento, string Direccion, string Especialidad, string Telefono)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarDocentes", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "ModificarDocente");
+                cmd.Parameters.AddWithValue("@CC", CC);
+                cmd.Parameters.AddWithValue("@Nombre", Nombre);
+                cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
+                cmd.Parameters.AddWithValue("@Direccion", Direccion);
+                cmd.Parameters.AddWithValue("@Especialidad", Especialidad);
+                cmd.Parameters.AddWithValue("@Telefono", Telefono);
+
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException ("Error: "+ ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+
+                }
             }
         }
 
@@ -73,13 +107,90 @@ namespace DAL
                     connection.Close();
             }   
 
-
-
-
         }
 
+        public DataTable MostrarDocentesCedula(string CC)
+        {
+            try
+            {
 
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarDocentes", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "MostrarDocentesCedula");
+                cmd.Parameters.AddWithValue("@CC", CC);
+                SqlDataAdapter datos = new SqlDataAdapter(cmd);
+                DataTable tabla = new DataTable();
+                datos.Fill(tabla);
+                return tabla;
 
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
+        }
+
+        public DataTable MostrarDocentesEspecialidad(string Especialidad)
+        {
+            try
+            {
+
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarDocentes", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "MostrarDocentesEspecialidad");
+                cmd.Parameters.AddWithValue("@Especialidad", Especialidad);
+                SqlDataAdapter datos = new SqlDataAdapter(cmd);
+                DataTable tabla = new DataTable();
+                datos.Fill(tabla);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
+        }
+
+        public void EliminarDocente(string CC)
+        {
+            try
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("GestionarDocentes", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "EliminarDocente");
+                    cmd.Parameters.AddWithValue("@CC", CC);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al intentar eliminar los datos del docente: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
 
     }
 }

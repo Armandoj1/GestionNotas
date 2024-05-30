@@ -60,4 +60,5 @@ C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\Rop.Winforms.Icons.dll
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\Rop.Winforms.Icons.FontAwesone.dll
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmGestionDocentes.resources
-C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.SubMenuRegistrarMaterias.resources
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.SubMenuAsignarMaterias.resources
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.SubMenuCrearMaterias.resources
