@@ -117,7 +117,7 @@ public class D_Estudiantes
 
     }
 
-
+    
     public void AgregarEstudiante(string nombre, string CC, DateTime fechaNacimiento, string direccion, string telefono)
     {
         try

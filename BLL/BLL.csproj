@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="B_Estudiantescs.cs" />
     <Compile Include="B_Grados.cs" />
+    <Compile Include="B_Materias.cs" />
     <Compile Include="B_VincularGrado.cs" />
+    <Compile Include="B_GestionDocentes.cs" />
     <Compile Include="Testeo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

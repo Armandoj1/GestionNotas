@@ -23,7 +23,7 @@ namespace DAL
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Accion", "Vincular");
                 cmd.Parameters.AddWithValue("@CC", CC);
-                cmd.Parameters.AddWithValue("@NombreGrado", GradoID);
+                cmd.Parameters.AddWithValue("@gradoID", GradoID);
 
                 cmd.ExecuteNonQuery();
             }
