@@ -13,7 +13,7 @@ using BLL;
 namespace PRESENTACION
 {
     public partial class FrmGestionDocentes : Form
-    {   
+    {
 
         B_GestionDocentes docentes = new B_GestionDocentes();
         E_Docentes valores = new E_Docentes();
@@ -22,6 +22,7 @@ namespace PRESENTACION
         {
             InitializeComponent();
             MostrarDgvDocentes();
+            LoadComboBox();
         }
 
         public void MostrarDgvDocentes()
@@ -29,7 +30,29 @@ namespace PRESENTACION
 
             dataGridView1.DataSource = docentes.MostrarDocentes();
             this.formato();
+
         }
+
+        public void LoadComboBox()
+        {
+            try
+            {
+                DataTable dataTable = docentes.MostrarEspecialidad();
+                CboxEspecialidad.DataSource = dataTable;
+                CboxEspecialidad.DisplayMember = "NombreEspecialidad"; // La columna que se muestra en el ComboBox
+                CboxEspecialidad.ValueMember = "EspecialidadID"; // El valor que se asocia con cada ítem (puedes cambiar esto según lo que necesites)
+
+            }
+            catch (Exception)
+            {
+
+            }
+
+           
+
+        }
+            
+
 
         public void formato()
         {
@@ -56,7 +79,7 @@ namespace PRESENTACION
             TxtNombre.Clear();
             TxtDireccion.Clear();
             TxtTelefono.Clear();
-            TxtEspecialidad.Clear();
+            CboxEspecialidad.Text = "";
             PickerNacimiento.Value = DateTime.Now;
             TxtCC.Enabled = true;
         }
@@ -75,13 +98,14 @@ namespace PRESENTACION
             try
             {
                 if (TxtCC.Text != "" && TxtNombre.Text != "" && PickerNacimiento.Text != "" && TxtDireccion.Text != ""
-                    && TxtEspecialidad.Text != "" && TxtTelefono.Text != "")
+                    && CboxEspecialidad.Text != "" && TxtTelefono.Text != "")
                 {
                     valores.CC1 = TxtCC.Text;
                     valores.Nombre1 = TxtNombre.Text;
                     valores.Direccion1 = TxtDireccion.Text;
                     valores.Telefono1 = TxtTelefono.Text;
-                    valores.Especialidad1 = TxtEspecialidad.Text;
+                    string Especialidad = Convert.ToString(CboxEspecialidad.SelectedValue);
+                    valores.Especialidad1 = Convert.ToInt32(Especialidad);
                     //Obtención del datos de la fecha de nacimiento
                     DateTime fechaNacimiento = PickerNacimiento.Value.Date;
 
@@ -121,7 +145,8 @@ namespace PRESENTACION
                     valores.Nombre1 = TxtNombre.Text;
                     valores.FechaNacimiento1 = PickerNacimiento.Value.Date;
                     valores.Telefono1 = TxtTelefono.Text;
-                    valores.Especialidad1 = TxtEspecialidad.Text;
+                    string Especialidad = Convert.ToString(CboxEspecialidad.SelectedValue);
+                    valores.Especialidad1 = Convert.ToInt32(Especialidad);
                     valores.Direccion1 = TxtDireccion.Text;
                     string fechaNacimiento = valores.FechaNacimiento1.ToString("yyyy-MM-dd");
                     valores.CC1 = TxtCC.Text;
@@ -177,14 +202,14 @@ namespace PRESENTACION
                     string fechaNacimiento = row.Cells["FechaNacimiento"].Value.ToString();
                     string direccion = row.Cells["Direccion"].Value.ToString();
                     string telefono = row.Cells["Telefono"].Value.ToString();
-                    string Especialidad = row.Cells["Especialidad"].Value.ToString();
+                    string Especialidad = row.Cells["EspecialidadID"].Value.ToString();
 
                     TxtNombre.Text = nombre;
                     TxtCC.Text = cc;
                     PickerNacimiento.Value = DateTime.Parse(fechaNacimiento);
                     TxtDireccion.Text = direccion;
                     TxtTelefono.Text = telefono;
-                    TxtEspecialidad.Text = Especialidad;
+                    CboxEspecialidad.Text = Especialidad;
 
                 }
 
@@ -208,7 +233,7 @@ namespace PRESENTACION
         {
             try
             {
-                if (TxtBuscarCC.Text != "")
+                if (TxtCC.Text != "")
                 {
                     DialogResult resultado = MessageBox.Show("¿Seguro que deseas eliminar la información de este docente?", "Mensaje del sistema",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -274,12 +299,17 @@ namespace PRESENTACION
             }
         }
 
-        private void TxtEspecialidad_KeyPress(object sender, KeyPressEventArgs e)
+        private void CboxEspecialidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

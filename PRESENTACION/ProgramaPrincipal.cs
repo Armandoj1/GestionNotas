@@ -74,7 +74,16 @@ namespace PRESENTACION
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmGestionGrados());
+            if (PnlGestionarGrados.Visible == true)
+            {
+                PnlGestionarGrados.Visible = false;
+                iconButton2.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
+            }
+            else
+            {
+                PnlGestionarGrados.Visible = true;
+                iconButton2.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
+            }
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -89,11 +98,6 @@ namespace PRESENTACION
     private void iconButton4_Click(object sender, EventArgs e)
         {
             OpenChildForm(new SubMenuAsignarMaterias());
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void iconButton5_Click_1(object sender, EventArgs e)
@@ -113,6 +117,22 @@ namespace PRESENTACION
                 SubMenuMaterias.Visible = true;
                 iconButton6.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
             }
+        }
+
+        
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmGestionGrados());
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            OpenChildForm (new FrmCrearGrados());
+        }
+
+        private void BtnAsignarMateriaGrados_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmMateriasGrados());
         }
     }
 }

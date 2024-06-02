@@ -31,7 +31,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TxtNombreCompleto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.Btn_Cerrar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnModificarEstudiante = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@
             this.TxtGradoBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtCCBuscar = new System.Windows.Forms.TextBox();
-            this.CboxGrado = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -86,15 +84,6 @@
             this.label1.Size = new System.Drawing.Size(118, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombre completo:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(855, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Grado:";
             // 
             // Btn_Cerrar
             // 
@@ -138,7 +127,7 @@
             // 
             // PickerNacimiento
             // 
-            this.PickerNacimiento.Location = new System.Drawing.Point(982, 31);
+            this.PickerNacimiento.Location = new System.Drawing.Point(858, 31);
             this.PickerNacimiento.Name = "PickerNacimiento";
             this.PickerNacimiento.Size = new System.Drawing.Size(218, 22);
             this.PickerNacimiento.TabIndex = 30;
@@ -181,7 +170,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(979, 12);
+            this.label3.Location = new System.Drawing.Point(855, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 16);
             this.label3.TabIndex = 25;
@@ -240,15 +229,6 @@
             this.TxtCCBuscar.TabIndex = 37;
             this.TxtCCBuscar.TextChanged += new System.EventHandler(this.TxtCCBuscar_TextChanged_1);
             // 
-            // CboxGrado
-            // 
-            this.CboxGrado.FormattingEnabled = true;
-            this.CboxGrado.Location = new System.Drawing.Point(858, 31);
-            this.CboxGrado.Name = "CboxGrado";
-            this.CboxGrado.Size = new System.Drawing.Size(114, 24);
-            this.CboxGrado.TabIndex = 42;
-            this.CboxGrado.Click += new System.EventHandler(this.CboxGrado_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(689, 59);
@@ -266,12 +246,10 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1211, 779);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.CboxGrado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtGradoBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtCCBuscar);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.Btn_Cerrar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnModificarEstudiante);
@@ -301,7 +279,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox TxtNombreCompleto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Btn_Cerrar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnModificarEstudiante;
@@ -318,7 +295,6 @@
         private System.Windows.Forms.TextBox TxtGradoBuscar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtCCBuscar;
-        private System.Windows.Forms.ComboBox CboxGrado;
         private System.Windows.Forms.Button button1;
     }
 }

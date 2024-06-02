@@ -15,7 +15,7 @@ namespace DAL
         SqlConnection connection = new SqlConnection(connectionString);
 
 
-        public void AgregarDocente(string Nombre, string CC, DateTime FechaNacimiento, string Direccion, string Especialidad, string Telefono)
+        public void AgregarDocente(string Nombre, string CC, DateTime FechaNacimiento, string Direccion, int Especialidad, string Telefono)
         {
             try
             {           
@@ -29,7 +29,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CC", CC);
                 cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
                 cmd.Parameters.AddWithValue("@Direccion", Direccion);
-                cmd.Parameters.AddWithValue("@Especialidad", Especialidad);
+                cmd.Parameters.AddWithValue("@EspecialidadID", Especialidad);
                 cmd.Parameters.AddWithValue("@Telefono", Telefono);
 
 
@@ -45,7 +45,7 @@ namespace DAL
             }
         }
 
-        public void ModificarDocente(String CC, string Nombre, DateTime FechaNacimiento, string Direccion, string Especialidad, string Telefono)
+        public void ModificarDocente(String CC, string Nombre, DateTime FechaNacimiento, string Direccion, int Especialidad, string Telefono)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Nombre", Nombre);
                 cmd.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
                 cmd.Parameters.AddWithValue("@Direccion", Direccion);
-                cmd.Parameters.AddWithValue("@Especialidad", Especialidad);
+                cmd.Parameters.AddWithValue("@EspecialidadID", Especialidad);
                 cmd.Parameters.AddWithValue("@Telefono", Telefono);
 
 
@@ -146,7 +146,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand("GestionarDocentes", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Accion", "MostrarDocentesEspecialidad");
-                cmd.Parameters.AddWithValue("@Especialidad", Especialidad);
+                cmd.Parameters.AddWithValue("@EspecialidadID", Especialidad);
                 SqlDataAdapter datos = new SqlDataAdapter(cmd);
                 DataTable tabla = new DataTable();
                 datos.Fill(tabla);
@@ -191,6 +191,36 @@ namespace DAL
                 }
             }
         }
+
+
+        public DataTable MostrarEspecialidad()
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarDocentes", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "MostrarEspecialidad");
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+
+            }
+            catch (Exception ex )
+            {
+
+                throw new ApplicationException ("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
 
     }
 }

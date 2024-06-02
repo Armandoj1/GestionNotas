@@ -71,7 +71,6 @@ namespace PRESENTACION
             TxtDireccion.Text = "";
             TxtNombreCompleto.Text = "";
             PickerNacimiento.Text = "";
-            CboxGrado.SelectedIndex = 0;
             TxtCC.Enabled = true;
 
         }
@@ -146,30 +145,47 @@ namespace PRESENTACION
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            TxtCC.Enabled = false;
-            // Verifica que la fila clickeada no es una fila de encabezado
-            if (dataGridView1.RowCount > 0 && e.RowIndex >= 0)
+            try
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-                // Extrae los valores de las celdas
-                string nombre = row.Cells["NombreCompleto"].Value.ToString();
-                string cc = row.Cells["CC"].Value.ToString();
-                string fechaNacimiento = row.Cells["FechaNacimiento"].Value.ToString();
-                string direccion = row.Cells["Direccion"].Value.ToString();
-                string telefono = row.Cells["Telefono"].Value.ToString();
-                string grado = row.Cells["NombreGrado"].Value.ToString();
+                DialogResult resultado = MessageBox.Show("¿Deseas manipular la información de este estudiante?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                // Asigna los valores a los controles correspondientes
-                TxtNombreCompleto.Text = nombre;
-                TxtCC.Text = cc;
-                PickerNacimiento.Value = DateTime.Parse(fechaNacimiento);
-                TxtDireccion.Text = direccion;
-                TxtTelefono.Text = telefono;
-                CboxGrado.Text = grado; 
+
+                if (resultado == DialogResult.Yes)
+                {
+                    TxtCC.Enabled = false;
+                    // Verifica que la fila clickeada no es una fila de encabezado
+                    if (dataGridView1.RowCount > 0 && e.RowIndex >= 0)
+                    {
+                        DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                        // Extrae los valores de las celdas
+                        string nombre = row.Cells["NombreCompleto"].Value.ToString();
+                        string cc = row.Cells["CC"].Value.ToString();
+                        string fechaNacimiento = row.Cells["FechaNacimiento"].Value.ToString();
+                        string direccion = row.Cells["Direccion"].Value.ToString();
+                        string telefono = row.Cells["Telefono"].Value.ToString();
+                        string grado = row.Cells["NombreGrado"].Value.ToString();
+
+                        // Asigna los valores a los controles correspondientes
+                        TxtNombreCompleto.Text = nombre;
+                        TxtCC.Text = cc;
+                        PickerNacimiento.Value = DateTime.Parse(fechaNacimiento);
+                        TxtDireccion.Text = direccion;
+                        TxtTelefono.Text = telefono;
+                    }
+                }
 
 
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);;
+            }
+           
+
+            
         }
 
 
@@ -257,12 +273,6 @@ namespace PRESENTACION
 
                         string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
                         BLL.ModificarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
-                        if (CboxGrado.SelectedValue != null)
-                        {
-                            // Obtener el GradoID seleccionado
-                            string gradoID = Convert.ToString(CboxGrado.SelectedValue);
-                            vincular.ModificarGrado(gradoID, TxtCC.Text);
-                        }
                         MessageBox.Show("Estudiante modificado con éxito.", "Mesanje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
                     }
@@ -302,7 +312,7 @@ namespace PRESENTACION
             {
 
                 if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty &&
-                    TxtTelefono.Text != string.Empty && CboxGrado.Text != string.Empty)
+                    TxtTelefono.Text != string.Empty)
                 {
 
                     estudiante.Nombre = TxtNombreCompleto.Text;
@@ -311,15 +321,12 @@ namespace PRESENTACION
                     estudiante.Direccion = TxtDireccion.Text;
                     estudiante.Telefono = TxtTelefono.Text;
                     datos.CC1 = estudiante.CC;
-                    string gradoID = Convert.ToString(CboxGrado.SelectedValue);
-                    datos.GradoID = gradoID;
 
                     string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");     
 
 
                     BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
-                    vincular.AgregarGrado(datos.CC1, gradoID);
-
+  
                     MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
@@ -371,19 +378,7 @@ namespace PRESENTACION
 
         private void LoadComboBoxData()
         {
-            try
-            {
-                DataTable dataTable = grados.ListarGrados();
-                CboxGrado.DataSource = dataTable;
-                CboxGrado.DisplayMember = "NombreGrado"; // La columna que se muestra en el ComboBox
-                CboxGrado.ValueMember = "GradoID"; // El valor que se asocia con cada ítem (puedes cambiar esto según lo que necesites)
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
         
 

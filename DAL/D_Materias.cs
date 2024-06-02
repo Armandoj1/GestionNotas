@@ -40,6 +40,65 @@ namespace DAL
             }
         }
 
+        public DataTable MostraMateriaGrado()
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "MostrarGradosMaterias");
+                SqlDataAdapter tabla = new SqlDataAdapter(cmd);
+                DataTable datos = new DataTable();
+                tabla.Fill(datos);
+                return datos;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
+        public void VincularMateriaGrado(string MateriaID, int GradoID)
+        {
+            try
+            {
+
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "VincularMateriasGrado");
+                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+
+        }
+
         public void VincularMateria(string MateriaID, string DocenteID)
         {
             try

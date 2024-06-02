@@ -47,5 +47,15 @@ namespace BLL
             materias.CambiarAsignacion(MateriaID, DocenteID);
         }
 
+        public void VincularMateriaGrado(string MateriaID, int GradoID)
+        {
+            materias.VincularMateriaGrado(MateriaID, GradoID);
+        }
+
+        public DataTable MostrarMateriasGrados()
+        {
+            return materias.MostraMateriaGrado();
+        }
+
     }
 }

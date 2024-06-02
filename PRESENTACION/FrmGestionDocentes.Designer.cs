@@ -38,7 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtEspecialidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.TxtBuscarCC = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtBuscarEspecialidad = new System.Windows.Forms.TextBox();
+            this.CboxEspecialidad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(994, 19);
+            this.label4.Location = new System.Drawing.Point(1025, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 9;
@@ -128,7 +128,7 @@
             // 
             // TxtDireccion
             // 
-            this.TxtDireccion.Location = new System.Drawing.Point(991, 39);
+            this.TxtDireccion.Location = new System.Drawing.Point(1022, 39);
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(156, 22);
             this.TxtDireccion.TabIndex = 8;
@@ -141,14 +141,6 @@
             this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Especialidad:";
-            // 
-            // TxtEspecialidad
-            // 
-            this.TxtEspecialidad.Location = new System.Drawing.Point(819, 39);
-            this.TxtEspecialidad.Name = "TxtEspecialidad";
-            this.TxtEspecialidad.Size = new System.Drawing.Size(156, 22);
-            this.TxtEspecialidad.TabIndex = 10;
-            this.TxtEspecialidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEspecialidad_KeyPress);
             // 
             // label6
             // 
@@ -232,11 +224,21 @@
             this.TxtBuscarEspecialidad.TabIndex = 19;
             this.TxtBuscarEspecialidad.TextChanged += new System.EventHandler(this.TxtBuscarEspecialidad_TextChanged);
             // 
+            // CboxEspecialidad
+            // 
+            this.CboxEspecialidad.FormattingEnabled = true;
+            this.CboxEspecialidad.Location = new System.Drawing.Point(819, 37);
+            this.CboxEspecialidad.Name = "CboxEspecialidad";
+            this.CboxEspecialidad.Size = new System.Drawing.Size(176, 24);
+            this.CboxEspecialidad.TabIndex = 24;
+            this.CboxEspecialidad.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // FrmGestionDocentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 776);
+            this.Controls.Add(this.CboxEspecialidad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TxtBuscarCC);
             this.Controls.Add(this.label9);
@@ -247,7 +249,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtTelefono);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TxtEspecialidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TxtDireccion);
             this.Controls.Add(this.PickerNacimiento);
@@ -278,7 +279,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtEspecialidad;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtTelefono;
         private System.Windows.Forms.Button BtnAgregar;
@@ -288,5 +288,6 @@
         private System.Windows.Forms.TextBox TxtBuscarCC;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtBuscarEspecialidad;
+        private System.Windows.Forms.ComboBox CboxEspecialidad;
     }
 }
