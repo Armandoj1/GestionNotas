@@ -54,7 +54,12 @@ namespace BLL
             grados.CambiarNombreGrado(NombreGrado, GradoID);
         }
 
-      
+        public void EliminarEstudianteGrado(string EstudianteCC)
+        {
+            grados.EliminarEstudianteGrado(EstudianteCC);
+        }
+
+
 
     }
 }

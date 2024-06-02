@@ -47,7 +47,7 @@ namespace DAL
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "MostrarGradosMaterias");
+                cmd.Parameters.AddWithValue("@Accion", "GradosMaterias");
                 SqlDataAdapter tabla = new SqlDataAdapter(cmd);
                 DataTable datos = new DataTable();
                 tabla.Fill(datos);
@@ -69,7 +69,6 @@ namespace DAL
             }
         }
 
-
         public void VincularMateriaGrado(string MateriaID, int GradoID)
         {
             try
@@ -78,7 +77,7 @@ namespace DAL
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "VincularMateriasGrado");
+                cmd.Parameters.AddWithValue("@Accion", "Vincular2");
                 cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
                 cmd.Parameters.AddWithValue("@GradoID", GradoID);
                 cmd.ExecuteNonQuery();
@@ -194,7 +193,7 @@ namespace DAL
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "MateriaModificar");
+                cmd.Parameters.AddWithValue("@Accion", "Modificar");
                 cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
                 cmd.Parameters.AddWithValue("@NombreMateria", NombreMateria);
                 cmd.ExecuteNonQuery();
@@ -264,9 +263,61 @@ namespace DAL
                     connection.Close();
             }
 
+        }
+    
+        public void EliminarAsignacion(string MateriaID)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "EliminarAsignacion");
+                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                cmd.ExecuteNonQuery();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
 
 
 
         }
+
+        public void EliminarVinculacion(string MateriaID, int GradoID)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "EliminarMateriaGrado");
+                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
+        }
+
+
+
     }
 }

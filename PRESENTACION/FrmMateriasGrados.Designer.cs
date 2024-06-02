@@ -72,6 +72,7 @@
             this.BtnEliminar.TabIndex = 15;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnModificar
             // 
@@ -90,6 +91,7 @@
             this.BtnAgregarMateria.TabIndex = 13;
             this.BtnAgregarMateria.Text = "Agregar";
             this.BtnAgregarMateria.UseVisualStyleBackColor = true;
+            this.BtnAgregarMateria.Click += new System.EventHandler(this.BtnAgregarMateria_Click);
             // 
             // label2
             // 
@@ -111,14 +113,14 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1082, 520);
+            this.dataGridView1.Size = new System.Drawing.Size(1174, 650);
             this.dataGridView1.TabIndex = 11;
             // 
             // FrmMateriasGrados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 594);
+            this.ClientSize = new System.Drawing.Size(1198, 854);
             this.Controls.Add(this.CboxMateriaID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CboxGradoID);

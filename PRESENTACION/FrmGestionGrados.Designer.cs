@@ -37,12 +37,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtCCEstudiante = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.DgvEstudiantesSinGrados = new System.Windows.Forms.DataGridView();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnCambiar = new System.Windows.Forms.Button();
             this.DgvEstudiantesConGrados = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiantesSinGrados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiantesConGrados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +84,8 @@
             this.BtnEliminarGrados.TabIndex = 48;
             this.BtnEliminarGrados.Text = "Desvincular grado";
             this.BtnEliminarGrados.UseVisualStyleBackColor = true;
+            this.BtnEliminarGrados.Visible = false;
+            this.BtnEliminarGrados.Click += new System.EventHandler(this.BtnEliminarGrados_Click);
             // 
             // BtnAgregarGrados
             // 
@@ -128,16 +130,16 @@
             this.TxtCCEstudiante.Size = new System.Drawing.Size(142, 22);
             this.TxtCCEstudiante.TabIndex = 53;
             // 
-            // dataGridView2
+            // DgvEstudiantesSinGrados
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(324, 48);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(876, 664);
-            this.dataGridView2.TabIndex = 55;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.DgvEstudiantesSinGrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEstudiantesSinGrados.Location = new System.Drawing.Point(324, 48);
+            this.DgvEstudiantesSinGrados.Name = "DgvEstudiantesSinGrados";
+            this.DgvEstudiantesSinGrados.RowHeadersWidth = 51;
+            this.DgvEstudiantesSinGrados.RowTemplate.Height = 24;
+            this.DgvEstudiantesSinGrados.Size = new System.Drawing.Size(876, 664);
+            this.DgvEstudiantesSinGrados.TabIndex = 55;
+            this.DgvEstudiantesSinGrados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // BtnModificar
             // 
@@ -145,7 +147,7 @@
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(160, 30);
             this.BtnModificar.TabIndex = 56;
-            this.BtnModificar.Text = "Cambiar de grado";
+            this.BtnModificar.Text = "Modificar grados";
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -155,7 +157,7 @@
             this.BtnCambiar.Name = "BtnCambiar";
             this.BtnCambiar.Size = new System.Drawing.Size(131, 30);
             this.BtnCambiar.TabIndex = 57;
-            this.BtnCambiar.Text = "Modificar grado";
+            this.BtnCambiar.Text = "Cambiar grado";
             this.BtnCambiar.UseVisualStyleBackColor = true;
             this.BtnCambiar.Visible = false;
             this.BtnCambiar.Click += new System.EventHandler(this.BtnCambiar_Click);
@@ -180,7 +182,7 @@
             this.Controls.Add(this.DgvEstudiantesConGrados);
             this.Controls.Add(this.BtnCambiar);
             this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.DgvEstudiantesSinGrados);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtCCEstudiante);
             this.Controls.Add(this.label1);
@@ -194,7 +196,7 @@
             this.Text = "FrmGestionGrados";
             this.Load += new System.EventHandler(this.FrmGestionGrados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiantesSinGrados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiantesConGrados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,7 +214,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtCCEstudiante;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView DgvEstudiantesSinGrados;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Button BtnCambiar;
         private System.Windows.Forms.DataGridView DgvEstudiantesConGrados;

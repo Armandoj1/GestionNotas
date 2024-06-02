@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGenerarBoletines = new FontAwesome.Sharp.IconButton();
             this.SubMenuMaterias = new System.Windows.Forms.Panel();
+            this.BtnAsignarMateriaGrados = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
@@ -51,7 +52,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.PanelPrincipal = new System.Windows.Forms.Panel();
-            this.BtnAsignarMateriaGrados = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SubMenuMaterias.SuspendLayout();
             this.PnlGestionarGrados.SuspendLayout();
@@ -108,6 +108,23 @@
             this.SubMenuMaterias.TabIndex = 19;
             this.SubMenuMaterias.Visible = false;
             // 
+            // BtnAsignarMateriaGrados
+            // 
+            this.BtnAsignarMateriaGrados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAsignarMateriaGrados.IconChar = FontAwesome.Sharp.IconChar.Chalkboard;
+            this.BtnAsignarMateriaGrados.IconColor = System.Drawing.Color.Black;
+            this.BtnAsignarMateriaGrados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnAsignarMateriaGrados.IconSize = 30;
+            this.BtnAsignarMateriaGrados.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.BtnAsignarMateriaGrados.Location = new System.Drawing.Point(0, 54);
+            this.BtnAsignarMateriaGrados.Name = "BtnAsignarMateriaGrados";
+            this.BtnAsignarMateriaGrados.Size = new System.Drawing.Size(219, 54);
+            this.BtnAsignarMateriaGrados.TabIndex = 5;
+            this.BtnAsignarMateriaGrados.Text = "Asignación a grados";
+            this.BtnAsignarMateriaGrados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAsignarMateriaGrados.UseVisualStyleBackColor = true;
+            this.BtnAsignarMateriaGrados.Click += new System.EventHandler(this.BtnAsignarMateriaGrados_Click);
+            // 
             // iconButton5
             // 
             this.iconButton5.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -137,7 +154,7 @@
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(219, 54);
             this.iconButton4.TabIndex = 2;
-            this.iconButton4.Text = "Asignar a docente";
+            this.iconButton4.Text = "Asignación a docente";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton4.UseVisualStyleBackColor = true;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
@@ -200,7 +217,7 @@
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Size = new System.Drawing.Size(219, 54);
             this.iconButton7.TabIndex = 3;
-            this.iconButton7.Text = "Asignar grados";
+            this.iconButton7.Text = "Asignación a grados";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton7.UseVisualStyleBackColor = true;
             this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
@@ -350,23 +367,6 @@
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(1212, 766);
             this.PanelPrincipal.TabIndex = 2;
-            // 
-            // BtnAsignarMateriaGrados
-            // 
-            this.BtnAsignarMateriaGrados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAsignarMateriaGrados.IconChar = FontAwesome.Sharp.IconChar.Chalkboard;
-            this.BtnAsignarMateriaGrados.IconColor = System.Drawing.Color.Black;
-            this.BtnAsignarMateriaGrados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnAsignarMateriaGrados.IconSize = 30;
-            this.BtnAsignarMateriaGrados.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnAsignarMateriaGrados.Location = new System.Drawing.Point(0, 54);
-            this.BtnAsignarMateriaGrados.Name = "BtnAsignarMateriaGrados";
-            this.BtnAsignarMateriaGrados.Size = new System.Drawing.Size(219, 54);
-            this.BtnAsignarMateriaGrados.TabIndex = 5;
-            this.BtnAsignarMateriaGrados.Text = "Asignar a grados";
-            this.BtnAsignarMateriaGrados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAsignarMateriaGrados.UseVisualStyleBackColor = true;
-            this.BtnAsignarMateriaGrados.Click += new System.EventHandler(this.BtnAsignarMateriaGrados_Click);
             // 
             // ProgramaPrincipal
             // 

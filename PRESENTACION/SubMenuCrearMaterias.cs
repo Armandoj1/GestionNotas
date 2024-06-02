@@ -118,7 +118,7 @@ namespace PRESENTACION
             try
             {
                 DialogResult resultado = MessageBox.Show("¿Desea eliminar la información de esta materia?", "Mensaje del sistema",
-          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (resultado == DialogResult.Yes)
                 {

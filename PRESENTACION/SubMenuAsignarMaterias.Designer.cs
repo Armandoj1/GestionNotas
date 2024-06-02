@@ -50,8 +50,9 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(982, 317);
+            this.dataGridView1.Size = new System.Drawing.Size(1174, 650);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label2
             // 
@@ -80,6 +81,7 @@
             this.BtnModificar.TabIndex = 6;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Visible = false;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
@@ -90,6 +92,8 @@
             this.BtnEliminar.TabIndex = 7;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Visible = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // CboxDocente
             // 
@@ -120,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 447);
+            this.ClientSize = new System.Drawing.Size(1207, 784);
             this.Controls.Add(this.CboxMateriaID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CboxDocente);

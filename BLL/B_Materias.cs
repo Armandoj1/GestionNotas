@@ -57,5 +57,15 @@ namespace BLL
             return materias.MostraMateriaGrado();
         }
 
+        public void EliminarAsignacion(string MateriaID)
+        {
+            materias.EliminarAsignacion(MateriaID);
+        }
+
+        public void EliminarVinculacion(string MateriaID, int GradoID)
+        {
+            materias.EliminarVinculacion(MateriaID, GradoID);
+        }
+
     }
 }

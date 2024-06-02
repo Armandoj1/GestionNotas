@@ -35,6 +35,10 @@ namespace DAL
             {
                 throw new Exception("Error al obtener los grados: " + ex.Message);
             }
+            finally
+            {
+                connection.Close();
+            }
 
         }
 
@@ -106,10 +110,17 @@ namespace DAL
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
             }
         }
 
@@ -168,28 +179,85 @@ namespace DAL
 
         public DataTable MostrarGrados()
         {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "MostrarGrados");
+                SqlDataAdapter data = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                data.Fill(dataTable);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
 
-            SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Accion", "MostrarGrados");
-            SqlDataAdapter data = new SqlDataAdapter(cmd);
-            DataTable dataTable = new DataTable();
-            data.Fill(dataTable);
-            return dataTable;
+                throw new ApplicationException ("Error: " + ex.Message);
+            }
+            finally
+            {
+                if(connection.State ==ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
 
         }
 
         public DataTable MostrarEstudiantes()
         {
 
-            SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Accion", "Mostrar");
-            SqlDataAdapter data = new SqlDataAdapter(cmd);
-            DataTable dataTable = new DataTable();
-            data.Fill(dataTable);
-            return dataTable;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "Mostrar");
+                SqlDataAdapter data = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                data.Fill(dataTable);
+                return dataTable;
 
+            }
+            catch (Exception ex) 
+            {
+
+                throw new ApplicationException ("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+
+
+        }
+
+
+        public void EliminarEstudianteGrado(string EstudianteCC)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", "Desvincular");
+                cmd.Parameters.AddWithValue("@EstudianteCC", EstudianteCC);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
 
 

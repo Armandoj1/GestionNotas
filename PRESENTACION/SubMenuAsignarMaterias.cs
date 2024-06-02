@@ -92,7 +92,7 @@ namespace PRESENTACION
             dataGridView1.Columns[2].HeaderText = "Cédula del docente";
             dataGridView1.Columns[2].Width = 220;
             dataGridView1.Columns[3].HeaderText = "Nombre del docente";
-            dataGridView1.Columns[3].Width = 300;
+            dataGridView1.Columns[3].Width = 500;
         }
 
         private void BtnAgregarMateria_Click(object sender, EventArgs e)
@@ -147,6 +147,54 @@ namespace PRESENTACION
 
 
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DialogResult resultado = MessageBox.Show("¿Desea modificar la asignación de este docente?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    BtnEliminar.Visible = true;
+                    BtnModificar.Visible = true;
+                    if (dataGridView1.RowCount > 0)
+                    {
+                        CboxDocente.Text = dataGridView1.CurrentRow.Cells["DocenteID"].Value.ToString();
+                        CboxMateriaID.Text = dataGridView1.CurrentRow.Cells["MateriaID"].Value.ToString();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);;
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               DialogResult resultado =  MessageBox.Show("¿Está seguro de que desea eliminar la asignación de esta materia del docente?", "Mensaje del sistema",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+
+                    valores.MateriaID1 = CboxMateriaID.Text;
+                    materias.EliminarAsignacion(valores.MateriaID1);
+                    MessageBox.Show("¡Asignación eliminada con éxito!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarDgvMaterias();
+                    limpiar();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }
