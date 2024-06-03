@@ -95,6 +95,12 @@
     <Compile Include="FrmMateriasGrados.Designer.cs">
       <DependentUpon>FrmMateriasGrados.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistrarNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarNotas.Designer.cs">
+      <DependentUpon>FrmRegistrarNotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProgramaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMateriasGrados.resx">
       <DependentUpon>FrmMateriasGrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarNotas.resx">
+      <DependentUpon>FrmRegistrarNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgramaPrincipal.resx">
       <DependentUpon>ProgramaPrincipal.cs</DependentUpon>

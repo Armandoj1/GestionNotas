@@ -134,5 +134,10 @@ namespace PRESENTACION
         {
             OpenChildForm(new FrmMateriasGrados());
         }
+
+        private void btnGenerarBoletines_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

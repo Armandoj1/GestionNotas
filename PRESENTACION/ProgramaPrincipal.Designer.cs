@@ -52,6 +52,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SubMenuMaterias.SuspendLayout();
             this.PnlGestionarGrados.SuspendLayout();
@@ -64,6 +65,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.iconButton9);
             this.panel1.Controls.Add(this.btnGenerarBoletines);
             this.panel1.Controls.Add(this.SubMenuMaterias);
             this.panel1.Controls.Add(this.iconButton6);
@@ -91,9 +93,10 @@
             this.btnGenerarBoletines.Name = "btnGenerarBoletines";
             this.btnGenerarBoletines.Size = new System.Drawing.Size(219, 54);
             this.btnGenerarBoletines.TabIndex = 20;
-            this.btnGenerarBoletines.Text = "Boletines";
+            this.btnGenerarBoletines.Text = "Registrar notas";
             this.btnGenerarBoletines.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGenerarBoletines.UseVisualStyleBackColor = true;
+            this.btnGenerarBoletines.Click += new System.EventHandler(this.btnGenerarBoletines_Click);
             // 
             // SubMenuMaterias
             // 
@@ -368,6 +371,22 @@
             this.PanelPrincipal.Size = new System.Drawing.Size(1212, 766);
             this.PanelPrincipal.TabIndex = 2;
             // 
+            // iconButton9
+            // 
+            this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton9.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
+            this.iconButton9.IconColor = System.Drawing.Color.Black;
+            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton9.Location = new System.Drawing.Point(0, 584);
+            this.iconButton9.Name = "iconButton9";
+            this.iconButton9.Size = new System.Drawing.Size(219, 54);
+            this.iconButton9.TabIndex = 21;
+            this.iconButton9.Text = "Boletines";
+            this.iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton9.UseVisualStyleBackColor = true;
+            // 
             // ProgramaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -418,5 +437,6 @@
         private FontAwesome.Sharp.IconButton iconButton8;
         private FontAwesome.Sharp.IconButton iconButton7;
         private FontAwesome.Sharp.IconButton BtnAsignarMateriaGrados;
+        private FontAwesome.Sharp.IconButton iconButton9;
     }
 }
