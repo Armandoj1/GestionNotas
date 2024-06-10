@@ -67,3 +67,9 @@ C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmRegistrarNotas.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.Loginc.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmBoletines.resources
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\x86\leptonica-1.82.0.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\x86\tesseract50.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\x64\leptonica-1.82.0.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\x64\tesseract50.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\Tesseract.dll
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.ImprimirBoletin.resources

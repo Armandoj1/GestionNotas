@@ -46,6 +46,7 @@ namespace PRESENTACION
                 BtnGestionarDocentes.Visible = true;
                 BtnBoletin.Visible = true;
                 btnGenerarBoletines.Visible = false;
+                BtnImprimirBoletin.Visible = true;
             }
             else if (LblCargo.Text == "Docente")
             {
@@ -56,6 +57,7 @@ namespace PRESENTACION
                 BtnGestionarDocentes.Visible = false;
                 BtnBoletin.Visible = false;
                 btnGenerarBoletines.Visible = true;
+
             }
 
             }
@@ -193,6 +195,11 @@ namespace PRESENTACION
         private void BtnBoletin_Click(object sender, EventArgs e)
         {
             OpenChildForm (new FrmBoletines());
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+           OpenChildForm(new ImprimirBoletin());
         }
     }
 }
