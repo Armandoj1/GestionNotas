@@ -87,3 +87,7 @@ NO SE PUEDE IMPRIMIR, TODAS LAS MATERIAS DEBEN
 TENER SU NOTA PARA PODER IMPRIMIR. 
  RF21: Funcionalidad para imprimir, descargar y enviar el boletín en 
 formato PDF. 
+
+Fecha 10/06/2024------------------------------
+Agregación de boletines e impresión, faltan validaciones pero está en fase final 
+
