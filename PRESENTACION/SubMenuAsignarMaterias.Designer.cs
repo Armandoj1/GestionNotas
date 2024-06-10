@@ -36,6 +36,8 @@
             this.CboxDocente = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CboxMateriaID = new System.Windows.Forms.ComboBox();
+            this.CboxGrado = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1174, 650);
+            this.dataGridView1.Size = new System.Drawing.Size(1552, 816);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -81,7 +83,6 @@
             this.BtnModificar.TabIndex = 6;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
-            this.BtnModificar.Visible = false;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
@@ -92,7 +93,6 @@
             this.BtnEliminar.TabIndex = 7;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Visible = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // CboxDocente
@@ -120,11 +120,29 @@
             this.CboxMateriaID.Size = new System.Drawing.Size(186, 24);
             this.CboxMateriaID.TabIndex = 10;
             // 
+            // CboxGrado
+            // 
+            this.CboxGrado.FormattingEnabled = true;
+            this.CboxGrado.Location = new System.Drawing.Point(449, 43);
+            this.CboxGrado.Name = "CboxGrado";
+            this.CboxGrado.Size = new System.Drawing.Size(186, 24);
+            this.CboxGrado.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(446, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Grado a asignar:";
+            // 
             // SubMenuAsignarMaterias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 784);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1579, 945);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CboxGrado);
             this.Controls.Add(this.CboxMateriaID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CboxDocente);
@@ -151,5 +169,7 @@
         private System.Windows.Forms.ComboBox CboxDocente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CboxMateriaID;
+        private System.Windows.Forms.ComboBox CboxGrado;
+        private System.Windows.Forms.Label label1;
     }
 }

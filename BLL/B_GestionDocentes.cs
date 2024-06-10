@@ -10,9 +10,9 @@ namespace BLL
     public class B_GestionDocentes
     {
         DAL.D_GestionDocentes docentes = new DAL.D_GestionDocentes();
-        public void AgregarDocente(string Nombre, string CC, DateTime FechaNacimiento, string Direccion, int Especialidad, string Telefono)
+        public void AgregarDocente(string Nombre, string CC, DateTime FechaNacimiento, string Direccion, int Especialidad, string Telefono, string Correo)
         {
-            docentes.AgregarDocente(Nombre, CC, FechaNacimiento, Direccion, Especialidad, Telefono);
+            docentes.AgregarDocente(Nombre, CC, FechaNacimiento, Direccion, Especialidad, Telefono, Correo);
         }
 
         public DataTable MostrarDocentes()
@@ -20,9 +20,9 @@ namespace BLL
             return docentes.MostrarDocentes();   
         }
 
-        public void ModificarDocente(String CC, string Nombre, DateTime FechaNacimiento, string Direccion, int Especialidad, string Telefono)
+        public void ModificarDocente(String CC, string Nombre, DateTime FechaNacimiento, string Direccion, int Especialidad, string Telefono, string Correo)
         {
-            docentes.ModificarDocente(CC, Nombre, FechaNacimiento, Direccion, Especialidad, Telefono);
+            docentes.ModificarDocente(CC, Nombre, FechaNacimiento, Direccion, Especialidad, Telefono, Correo);
         }
 
         public DataTable MostrarDocentesCedula(string CC)
@@ -44,6 +44,14 @@ namespace BLL
         {
             return docentes.MostrarEspecialidad();
         }
+
+        public void AgregarEspecialidad(string NombreEspecialidad)
+        {
+            docentes.AgregarEspecialidad(NombreEspecialidad);
+        }
+
+
+
     }
 
     }

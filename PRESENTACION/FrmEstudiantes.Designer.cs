@@ -48,6 +48,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TxtCCBuscar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1188, 625);
+            this.dataGridView1.Size = new System.Drawing.Size(1550, 795);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -87,7 +89,7 @@
             // 
             // Btn_Cerrar
             // 
-            this.Btn_Cerrar.Location = new System.Drawing.Point(1069, 59);
+            this.Btn_Cerrar.Location = new System.Drawing.Point(1432, 59);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
             this.Btn_Cerrar.Size = new System.Drawing.Size(130, 34);
             this.Btn_Cerrar.TabIndex = 34;
@@ -198,7 +200,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 733);
+            this.label7.Location = new System.Drawing.Point(24, 915);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 16);
             this.label7.TabIndex = 40;
@@ -206,7 +208,7 @@
             // 
             // TxtGradoBuscar
             // 
-            this.TxtGradoBuscar.Location = new System.Drawing.Point(165, 730);
+            this.TxtGradoBuscar.Location = new System.Drawing.Point(162, 912);
             this.TxtGradoBuscar.Name = "TxtGradoBuscar";
             this.TxtGradoBuscar.Size = new System.Drawing.Size(152, 22);
             this.TxtGradoBuscar.TabIndex = 39;
@@ -215,7 +217,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(414, 733);
+            this.label6.Location = new System.Drawing.Point(411, 915);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 16);
             this.label6.TabIndex = 38;
@@ -223,7 +225,7 @@
             // 
             // TxtCCBuscar
             // 
-            this.TxtCCBuscar.Location = new System.Drawing.Point(550, 730);
+            this.TxtCCBuscar.Location = new System.Drawing.Point(547, 912);
             this.TxtCCBuscar.Name = "TxtCCBuscar";
             this.TxtCCBuscar.Size = new System.Drawing.Size(157, 22);
             this.TxtCCBuscar.TabIndex = 37;
@@ -231,7 +233,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(689, 59);
+            this.button1.Location = new System.Drawing.Point(1254, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 34);
             this.button1.TabIndex = 43;
@@ -239,12 +241,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // TxtCorreo
+            // 
+            this.TxtCorreo.Location = new System.Drawing.Point(1104, 31);
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(308, 22);
+            this.TxtCorreo.TabIndex = 44;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1101, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 16);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Correo electrónico:";
+            // 
             // FrmEstudiantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1211, 779);
+            this.ClientSize = new System.Drawing.Size(1579, 945);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.TxtCorreo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtGradoBuscar);
@@ -296,5 +315,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtCCBuscar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtCorreo;
+        private System.Windows.Forms.Label label8;
     }
 }

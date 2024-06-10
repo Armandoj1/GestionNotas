@@ -14,6 +14,8 @@ namespace ENTITY
         string Telefono;
         int Especialidad;
         DateTime FechaNacimiento;
+        string Correo;
+
 
         public string Nombre1 { get => Nombre; set => Nombre = value; }
         public string CC1 { get => CC; set => CC = value; }
@@ -21,5 +23,6 @@ namespace ENTITY
         public string Telefono1 { get => Telefono; set => Telefono = value; }
         public int Especialidad1 { get => Especialidad; set => Especialidad = value; }
         public DateTime FechaNacimiento1 { get => FechaNacimiento; set => FechaNacimiento = value; }
+        public string Correo1 { get => Correo; set => Correo = value; }
     }
 }

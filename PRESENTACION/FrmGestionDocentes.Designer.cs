@@ -48,6 +48,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TxtBuscarEspecialidad = new System.Windows.Forms.TextBox();
             this.CboxEspecialidad = new System.Windows.Forms.ComboBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.BtnAgregarEspecialidad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +65,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1194, 610);
+            this.dataGridView1.Size = new System.Drawing.Size(1555, 791);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -120,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1025, 19);
+            this.label4.Location = new System.Drawing.Point(1019, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 9;
@@ -193,7 +196,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(282, 733);
+            this.label8.Location = new System.Drawing.Point(282, 916);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 22;
@@ -201,7 +204,7 @@
             // 
             // TxtBuscarCC
             // 
-            this.TxtBuscarCC.Location = new System.Drawing.Point(365, 730);
+            this.TxtBuscarCC.Location = new System.Drawing.Point(365, 913);
             this.TxtBuscarCC.Name = "TxtBuscarCC";
             this.TxtBuscarCC.Size = new System.Drawing.Size(156, 22);
             this.TxtBuscarCC.TabIndex = 21;
@@ -210,7 +213,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 733);
+            this.label9.Location = new System.Drawing.Point(22, 916);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 16);
             this.label9.TabIndex = 20;
@@ -218,7 +221,7 @@
             // 
             // TxtBuscarEspecialidad
             // 
-            this.TxtBuscarEspecialidad.Location = new System.Drawing.Point(129, 730);
+            this.TxtBuscarEspecialidad.Location = new System.Drawing.Point(129, 913);
             this.TxtBuscarEspecialidad.Name = "TxtBuscarEspecialidad";
             this.TxtBuscarEspecialidad.Size = new System.Drawing.Size(132, 22);
             this.TxtBuscarEspecialidad.TabIndex = 19;
@@ -233,11 +236,39 @@
             this.CboxEspecialidad.TabIndex = 24;
             this.CboxEspecialidad.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // TxtCorreo
+            // 
+            this.TxtCorreo.Location = new System.Drawing.Point(1209, 39);
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(358, 22);
+            this.TxtCorreo.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1206, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 16);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Correo:";
+            // 
+            // BtnAgregarEspecialidad
+            // 
+            this.BtnAgregarEspecialidad.Location = new System.Drawing.Point(819, 76);
+            this.BtnAgregarEspecialidad.Name = "BtnAgregarEspecialidad";
+            this.BtnAgregarEspecialidad.Size = new System.Drawing.Size(176, 32);
+            this.BtnAgregarEspecialidad.TabIndex = 27;
+            this.BtnAgregarEspecialidad.Text = "Agregar especialidad";
+            this.BtnAgregarEspecialidad.UseVisualStyleBackColor = true;
+            this.BtnAgregarEspecialidad.Click += new System.EventHandler(this.BtnAgregarEspecialidad_Click);
+            // 
             // FrmGestionDocentes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 776);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1579, 945);
+            this.Controls.Add(this.BtnAgregarEspecialidad);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TxtCorreo);
             this.Controls.Add(this.CboxEspecialidad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TxtBuscarCC);
@@ -289,5 +320,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtBuscarEspecialidad;
         private System.Windows.Forms.ComboBox CboxEspecialidad;
+        private System.Windows.Forms.TextBox TxtCorreo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnAgregarEspecialidad;
     }
 }

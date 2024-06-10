@@ -50,28 +50,50 @@ namespace PRESENTACION
 
         }
 
+
+
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-
                 datos.NombreGrado = Txt_NombreGrado.Text;
                 grados.AgregarGrado(datos.NombreGrado);
                 MessageBox.Show("¡Grado creado con éxito!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
-
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error al crear el grado: " + ex.Message); ;
+                MessageBox.Show("Error al crear el grado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 MostrarGrado();
             }
-
         }
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtGradoID.Text == "")
+                {
+                    MessageBox.Show("¡Debes seleccionar un grado primero para modificarlo!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    datos.NombreGrado = Txt_NombreGrado.Text;
+                    datos.GradoID = Convert.ToInt32(TxtGradoID.Text);
+
+                    grados.CambiarNombreGrado(datos.NombreGrado, datos.GradoID);
+                    MostrarGrado();
+                    Limpiar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el grado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,34 +111,6 @@ namespace PRESENTACION
            
         }
 
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (TxtGradoID.Text == "")
-                {
-                    MessageBox.Show("¡Debes seleccionar un grado primero para modificarlo!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    datos.NombreGrado = Txt_NombreGrado.Text;
-                    datos.GradoID = Convert.ToInt32(TxtGradoID.Text);
-
-                    grados.CambiarNombreGrado(datos.NombreGrado, datos.GradoID);
-                    MessageBox.Show("¡Se ha modificado el nombre del grado de manera exitosa!","Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MostrarGrado();
-                    Limpiar();
-                }
-
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error: " + ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-           
-        }
+       
     }
 }

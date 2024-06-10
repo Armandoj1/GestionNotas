@@ -34,19 +34,21 @@ namespace PRESENTACION
         {
 
             dataGridView1.Columns[0].HeaderText = "Cédula";
-            dataGridView1.Columns[0].Width = 125;
+            dataGridView1.Columns[0].Width = 115;
             dataGridView1.Columns[1].HeaderText = "Nombre";
             dataGridView1.Columns[1].Width = 270;
             dataGridView1.Columns[2].HeaderText = "Fecha de nacimiento";
             dataGridView1.Columns[2].Width = 190;
             dataGridView1.Columns[3].HeaderText = "Dirección";
-            dataGridView1.Columns[3].Width = 170;
+            dataGridView1.Columns[3].Width = 160;
             dataGridView1.Columns[4].HeaderText = "Teléfono";
             dataGridView1.Columns[4].Width = 115;
             dataGridView1.Columns[5].HeaderText = "Grado";
             dataGridView1.Columns[5].Width = 75;
             dataGridView1.Columns[6].HeaderText = "Fecha de inclusión";
-            dataGridView1.Columns[6].Width = 190;
+            dataGridView1.Columns[6].Width = 174;
+            dataGridView1.Columns[7].Width = 70;
+            dataGridView1.Columns[8].Width = 326;
 
         }
 
@@ -166,6 +168,7 @@ namespace PRESENTACION
                         string direccion = row.Cells["Direccion"].Value.ToString();
                         string telefono = row.Cells["Telefono"].Value.ToString();
                         string grado = row.Cells["NombreGrado"].Value.ToString();
+                        string correo = row.Cells["Correo"].Value.ToString();
 
                         // Asigna los valores a los controles correspondientes
                         TxtNombreCompleto.Text = nombre;
@@ -173,6 +176,8 @@ namespace PRESENTACION
                         PickerNacimiento.Value = DateTime.Parse(fechaNacimiento);
                         TxtDireccion.Text = direccion;
                         TxtTelefono.Text = telefono;
+                        TxtCorreo.Text = correo;
+
                     }
                 }
 
@@ -270,9 +275,10 @@ namespace PRESENTACION
                         estudiante.FechaNacimiento = PickerNacimiento.Value.Date;
                         estudiante.Direccion = TxtDireccion.Text;
                         estudiante.Telefono = TxtTelefono.Text;
+                        estudiante.Correo = TxtCorreo.Text;
 
                         string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");
-                        BLL.ModificarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
+                        BLL.ModificarEstudiante(estudiante.Nombre, estudiante.CC, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono, estudiante.Correo);
                         MessageBox.Show("Estudiante modificado con éxito.", "Mesanje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
                     }
@@ -312,7 +318,7 @@ namespace PRESENTACION
             {
 
                 if (TxtCC.Text != string.Empty && TxtDireccion.Text != string.Empty && TxtNombreCompleto.Text != string.Empty &&
-                    TxtTelefono.Text != string.Empty)
+                    TxtTelefono.Text != string.Empty && TxtCorreo.Text != string.Empty)
                 {
 
                     estudiante.Nombre = TxtNombreCompleto.Text;
@@ -321,11 +327,12 @@ namespace PRESENTACION
                     estudiante.Direccion = TxtDireccion.Text;
                     estudiante.Telefono = TxtTelefono.Text;
                     datos.CC1 = estudiante.CC;
+                    estudiante.Correo = TxtCorreo.Text;
 
                     string fechaNacimiento = estudiante.FechaNacimiento.ToString("yyyy-MM-dd");     
 
 
-                    BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono);
+                    BLL.AgregarEstudiante(estudiante.CC, estudiante.Nombre, Convert.ToDateTime(fechaNacimiento), estudiante.Direccion, estudiante.Telefono, estudiante.Correo);
   
                     MessageBox.Show("Estudiante agregado de manera correcta.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

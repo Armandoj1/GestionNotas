@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 
 
@@ -7,31 +8,14 @@ namespace DAL
 {
     public class Conexion
     {
-        public void Abrir()
-        {
-            try
-            {
-                SqlConnection connection = new SqlConnection("Data Source = sql.holamundodevs.com; Initial Catalog = Jose_NotasDB; User ID = joserodriguez; Password = Holamundo123*");
-                connection.Open();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException(ex.Message);
-            }
-        }
-        public void Cerrar()
-        {
-            try
-            {
-                SqlConnection connection = new SqlConnection("Data Source = sql.holamundodevs.com; Initial Catalog = Jose_NotasDB; User ID = joserodriguez; Password = Holamundo123*");
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException(ex.Message);
-            }
-        }
 
-
+            public static SqlConnection GetConnection()
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnection"].ConnectionString;
+                return new SqlConnection(connectionString);
+            }
+        
     }
+
 }
+

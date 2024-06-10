@@ -53,7 +53,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(280, 664);
+            this.dataGridView1.Size = new System.Drawing.Size(280, 863);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -100,7 +100,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 728);
+            this.label1.Location = new System.Drawing.Point(12, 920);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 52;
@@ -108,7 +108,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 725);
+            this.textBox1.Location = new System.Drawing.Point(162, 917);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(142, 22);
             this.textBox1.TabIndex = 51;
@@ -137,7 +137,7 @@
             this.DgvEstudiantesSinGrados.Name = "DgvEstudiantesSinGrados";
             this.DgvEstudiantesSinGrados.RowHeadersWidth = 51;
             this.DgvEstudiantesSinGrados.RowTemplate.Height = 24;
-            this.DgvEstudiantesSinGrados.Size = new System.Drawing.Size(876, 664);
+            this.DgvEstudiantesSinGrados.Size = new System.Drawing.Size(1223, 863);
             this.DgvEstudiantesSinGrados.TabIndex = 55;
             this.DgvEstudiantesSinGrados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -169,16 +169,16 @@
             this.DgvEstudiantesConGrados.Name = "DgvEstudiantesConGrados";
             this.DgvEstudiantesConGrados.RowHeadersWidth = 51;
             this.DgvEstudiantesConGrados.RowTemplate.Height = 24;
-            this.DgvEstudiantesConGrados.Size = new System.Drawing.Size(876, 664);
+            this.DgvEstudiantesConGrados.Size = new System.Drawing.Size(1223, 863);
             this.DgvEstudiantesConGrados.TabIndex = 58;
             this.DgvEstudiantesConGrados.Visible = false;
             this.DgvEstudiantesConGrados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEstudiantesConGrados_CellClick);
+            this.DgvEstudiantesConGrados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEstudiantesConGrados_CellContentClick);
             // 
             // FrmGestionGrados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 786);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1579, 945);
             this.Controls.Add(this.DgvEstudiantesConGrados);
             this.Controls.Add(this.BtnCambiar);
             this.Controls.Add(this.BtnModificar);

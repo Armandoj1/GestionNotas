@@ -31,28 +31,31 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgramaPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnBoletin = new FontAwesome.Sharp.IconButton();
             this.btnGenerarBoletines = new FontAwesome.Sharp.IconButton();
             this.SubMenuMaterias = new System.Windows.Forms.Panel();
             this.BtnAsignarMateriaGrados = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.BtnGestionarMaterias = new FontAwesome.Sharp.IconButton();
             this.PnlGestionarGrados = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.BtnGestionarGrados = new FontAwesome.Sharp.IconButton();
+            this.BtnGestionarAlumnos = new FontAwesome.Sharp.IconButton();
+            this.BtnGestionarDocentes = new FontAwesome.Sharp.IconButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.LblCargo = new System.Windows.Forms.Label();
+            this.Lbl_Usuario = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.PanelPrincipal = new System.Windows.Forms.Panel();
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SubMenuMaterias.SuspendLayout();
             this.PnlGestionarGrados.SuspendLayout();
@@ -65,21 +68,39 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.iconButton9);
+            this.panel1.Controls.Add(this.BtnBoletin);
             this.panel1.Controls.Add(this.btnGenerarBoletines);
             this.panel1.Controls.Add(this.SubMenuMaterias);
-            this.panel1.Controls.Add(this.iconButton6);
+            this.panel1.Controls.Add(this.BtnGestionarMaterias);
             this.panel1.Controls.Add(this.PnlGestionarGrados);
-            this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Controls.Add(this.iconButton3);
+            this.panel1.Controls.Add(this.BtnGestionarGrados);
+            this.panel1.Controls.Add(this.BtnGestionarAlumnos);
+            this.panel1.Controls.Add(this.BtnGestionarDocentes);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 807);
+            this.panel1.Size = new System.Drawing.Size(219, 987);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnBoletin
+            // 
+            this.BtnBoletin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnBoletin.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBoletin.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
+            this.BtnBoletin.IconColor = System.Drawing.Color.Black;
+            this.BtnBoletin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnBoletin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBoletin.Location = new System.Drawing.Point(0, 584);
+            this.BtnBoletin.Name = "BtnBoletin";
+            this.BtnBoletin.Size = new System.Drawing.Size(219, 54);
+            this.BtnBoletin.TabIndex = 21;
+            this.BtnBoletin.Text = "Boletines";
+            this.BtnBoletin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBoletin.UseVisualStyleBackColor = true;
+            this.BtnBoletin.Visible = false;
+            this.BtnBoletin.Click += new System.EventHandler(this.BtnBoletin_Click);
             // 
             // btnGenerarBoletines
             // 
@@ -96,6 +117,7 @@
             this.btnGenerarBoletines.Text = "Registrar notas";
             this.btnGenerarBoletines.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGenerarBoletines.UseVisualStyleBackColor = true;
+            this.btnGenerarBoletines.Visible = false;
             this.btnGenerarBoletines.Click += new System.EventHandler(this.btnGenerarBoletines_Click);
             // 
             // SubMenuMaterias
@@ -162,22 +184,23 @@
             this.iconButton4.UseVisualStyleBackColor = true;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // iconButton6
+            // BtnGestionarMaterias
             // 
-            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
-            this.iconButton6.IconColor = System.Drawing.Color.Black;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 317);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(219, 54);
-            this.iconButton6.TabIndex = 18;
-            this.iconButton6.Text = "Gestionar materias";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton6.UseVisualStyleBackColor = true;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            this.BtnGestionarMaterias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGestionarMaterias.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestionarMaterias.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
+            this.BtnGestionarMaterias.IconColor = System.Drawing.Color.Black;
+            this.BtnGestionarMaterias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnGestionarMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGestionarMaterias.Location = new System.Drawing.Point(0, 317);
+            this.BtnGestionarMaterias.Name = "BtnGestionarMaterias";
+            this.BtnGestionarMaterias.Size = new System.Drawing.Size(219, 54);
+            this.BtnGestionarMaterias.TabIndex = 18;
+            this.BtnGestionarMaterias.Text = "Gestionar materias";
+            this.BtnGestionarMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGestionarMaterias.UseVisualStyleBackColor = true;
+            this.BtnGestionarMaterias.Visible = false;
+            this.BtnGestionarMaterias.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // PnlGestionarGrados
             // 
@@ -225,62 +248,65 @@
             this.iconButton7.UseVisualStyleBackColor = true;
             this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
             // 
-            // iconButton2
+            // BtnGestionarGrados
             // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 153);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(219, 54);
-            this.iconButton2.TabIndex = 12;
-            this.iconButton2.Text = "Gestionar grados";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.BtnGestionarGrados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGestionarGrados.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestionarGrados.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
+            this.BtnGestionarGrados.IconColor = System.Drawing.Color.Black;
+            this.BtnGestionarGrados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnGestionarGrados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGestionarGrados.Location = new System.Drawing.Point(0, 153);
+            this.BtnGestionarGrados.Name = "BtnGestionarGrados";
+            this.BtnGestionarGrados.Size = new System.Drawing.Size(219, 54);
+            this.BtnGestionarGrados.TabIndex = 12;
+            this.BtnGestionarGrados.Text = "Gestionar grados";
+            this.BtnGestionarGrados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGestionarGrados.UseVisualStyleBackColor = true;
+            this.BtnGestionarGrados.Visible = false;
+            this.BtnGestionarGrados.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // iconButton1
+            // BtnGestionarAlumnos
             // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.IdCard;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 99);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(219, 54);
-            this.iconButton1.TabIndex = 11;
-            this.iconButton1.Text = "Gestionar alumnos";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.BtnGestionarAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGestionarAlumnos.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestionarAlumnos.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.BtnGestionarAlumnos.IconColor = System.Drawing.Color.Black;
+            this.BtnGestionarAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnGestionarAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGestionarAlumnos.Location = new System.Drawing.Point(0, 99);
+            this.BtnGestionarAlumnos.Name = "BtnGestionarAlumnos";
+            this.BtnGestionarAlumnos.Size = new System.Drawing.Size(219, 54);
+            this.BtnGestionarAlumnos.TabIndex = 11;
+            this.BtnGestionarAlumnos.Text = "Gestionar alumnos";
+            this.BtnGestionarAlumnos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGestionarAlumnos.UseVisualStyleBackColor = true;
+            this.BtnGestionarAlumnos.Visible = false;
+            this.BtnGestionarAlumnos.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // iconButton3
+            // BtnGestionarDocentes
             // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 45);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(219, 54);
-            this.iconButton3.TabIndex = 9;
-            this.iconButton3.Text = "Gestionar docentes";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.BtnGestionarDocentes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGestionarDocentes.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestionarDocentes.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            this.BtnGestionarDocentes.IconColor = System.Drawing.Color.Black;
+            this.BtnGestionarDocentes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnGestionarDocentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGestionarDocentes.Location = new System.Drawing.Point(0, 45);
+            this.BtnGestionarDocentes.Name = "BtnGestionarDocentes";
+            this.BtnGestionarDocentes.Size = new System.Drawing.Size(219, 54);
+            this.BtnGestionarDocentes.TabIndex = 9;
+            this.BtnGestionarDocentes.Text = "Gestionar docentes";
+            this.BtnGestionarDocentes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGestionarDocentes.UseVisualStyleBackColor = true;
+            this.BtnGestionarDocentes.Visible = false;
+            this.BtnGestionarDocentes.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.ImageLocation = "";
-            this.pictureBox3.Location = new System.Drawing.Point(68, 766);
+            this.pictureBox3.Location = new System.Drawing.Point(67, 943);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(64, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -324,20 +350,52 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.LblCargo);
+            this.panel3.Controls.Add(this.Lbl_Usuario);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(219, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1212, 41);
+            this.panel3.Size = new System.Drawing.Size(1580, 50);
             this.panel3.TabIndex = 1;
+            // 
+            // LblCargo
+            // 
+            this.LblCargo.AutoSize = true;
+            this.LblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCargo.Location = new System.Drawing.Point(1270, 27);
+            this.LblCargo.Name = "LblCargo";
+            this.LblCargo.Size = new System.Drawing.Size(0, 20);
+            this.LblCargo.TabIndex = 4;
+            // 
+            // Lbl_Usuario
+            // 
+            this.Lbl_Usuario.AutoSize = true;
+            this.Lbl_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Usuario.Location = new System.Drawing.Point(1270, 9);
+            this.Lbl_Usuario.Name = "Lbl_Usuario";
+            this.Lbl_Usuario.Size = new System.Drawing.Size(0, 20);
+            this.Lbl_Usuario.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1178, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Cargo:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(966, 13);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1178, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario:";
             // 
@@ -346,9 +404,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.ImageLocation = "C:\\Users\\José A. Rodríguez\\source\\repos\\GestionNotas\\GestionNotas\\Iconos\\User.png" +
     "";
-            this.pictureBox1.Location = new System.Drawing.Point(1148, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1516, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -365,34 +423,20 @@
             // 
             // PanelPrincipal
             // 
+            this.PanelPrincipal.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.PanelPrincipal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelPrincipal.Location = new System.Drawing.Point(219, 41);
+            this.PanelPrincipal.Location = new System.Drawing.Point(219, 50);
             this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(1212, 766);
+            this.PanelPrincipal.Size = new System.Drawing.Size(1580, 937);
             this.PanelPrincipal.TabIndex = 2;
-            // 
-            // iconButton9
-            // 
-            this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton9.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
-            this.iconButton9.IconColor = System.Drawing.Color.Black;
-            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.Location = new System.Drawing.Point(0, 584);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Size = new System.Drawing.Size(219, 54);
-            this.iconButton9.TabIndex = 21;
-            this.iconButton9.Text = "Boletines";
-            this.iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton9.UseVisualStyleBackColor = true;
+            this.PanelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPrincipal_Paint);
             // 
             // ProgramaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1431, 807);
+            this.ClientSize = new System.Drawing.Size(1799, 987);
             this.Controls.Add(this.PanelPrincipal);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -425,18 +469,21 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel PanelPrincipal;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BtnGestionarDocentes;
+        private FontAwesome.Sharp.IconButton BtnGestionarGrados;
+        private FontAwesome.Sharp.IconButton BtnGestionarAlumnos;
         private FontAwesome.Sharp.IconButton btnGenerarBoletines;
         private System.Windows.Forms.Panel SubMenuMaterias;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton BtnGestionarMaterias;
         private System.Windows.Forms.Panel PnlGestionarGrados;
         private FontAwesome.Sharp.IconButton iconButton8;
         private FontAwesome.Sharp.IconButton iconButton7;
         private FontAwesome.Sharp.IconButton BtnAsignarMateriaGrados;
-        private FontAwesome.Sharp.IconButton iconButton9;
+        private FontAwesome.Sharp.IconButton BtnBoletin;
+        private System.Windows.Forms.Label LblCargo;
+        private System.Windows.Forms.Label Lbl_Usuario;
+        private System.Windows.Forms.Label label3;
     }
 }

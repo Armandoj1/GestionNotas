@@ -18,9 +18,6 @@ namespace PRESENTACION
         E_Materias valores = new E_Materias();
         B_Grados grados = new B_Grados();   
 
-
-
-
         public FrmMateriasGrados()
         {
             InitializeComponent();

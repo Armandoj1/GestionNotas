@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENTITY;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,8 @@ namespace PRESENTACION
     
     public partial class ProgramaPrincipal : Form
     {
+        
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -30,11 +33,42 @@ namespace PRESENTACION
 
         private Form currentForm = null; // Variable para almacenar el formulario actual
 
+
+
+        public void MostrarBotones()
+        {
+            if (LblCargo.Text == "Directivo")
+            {
+                BtnGestionarDocentes.Visible = true;
+                BtnGestionarAlumnos.Visible = true;
+                BtnGestionarGrados.Visible = true;
+                BtnGestionarMaterias.Visible = true;
+                BtnGestionarDocentes.Visible = true;
+                BtnBoletin.Visible = true;
+                btnGenerarBoletines.Visible = false;
+            }
+            else if (LblCargo.Text == "Docente")
+            {
+                BtnGestionarDocentes.Visible = false;
+                BtnGestionarAlumnos.Visible = false;
+                BtnGestionarGrados.Visible = false;
+                BtnGestionarMaterias.Visible = false;
+                BtnGestionarDocentes.Visible = false;
+                BtnBoletin.Visible = false;
+                btnGenerarBoletines.Visible = true;
+            }
+
+            }
+
         public ProgramaPrincipal()
         {
             InitializeComponent();
+            Lbl_Usuario.Text = E_Usuarios.Usuario2;
+            LblCargo.Text = E_Usuarios.Rol2;
+            MostrarBotones();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
+
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -42,7 +76,10 @@ namespace PRESENTACION
 
             if (respuesta == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
+                Loginc login = new Loginc();
+                login.Show();
+                
             }
             
         }
@@ -66,23 +103,31 @@ namespace PRESENTACION
             PanelPrincipal.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
         }
-        private void iconButton1_Click(object sender, EventArgs e)
+
+        
+
+    
+    private void iconButton1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmEstudiantes());
         }
+
+
+
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
             if (PnlGestionarGrados.Visible == true)
             {
                 PnlGestionarGrados.Visible = false;
-                iconButton2.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
+                BtnGestionarGrados.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
             }
             else
             {
                 PnlGestionarGrados.Visible = true;
-                iconButton2.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
+                BtnGestionarGrados.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
             }
         }
 
@@ -110,12 +155,12 @@ namespace PRESENTACION
             if (SubMenuMaterias.Visible == true)
             {
                 SubMenuMaterias.Visible = false;
-                iconButton6.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
+                BtnGestionarMaterias.IconChar = FontAwesome.Sharp.IconChar.CircleChevronRight;
             }
             else
             {
                 SubMenuMaterias.Visible = true;
-                iconButton6.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
+                BtnGestionarMaterias.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
             }
         }
 
@@ -137,7 +182,17 @@ namespace PRESENTACION
 
         private void btnGenerarBoletines_Click(object sender, EventArgs e)
         {
+            OpenChildForm (new FrmRegistrarNotas());
+        }
 
+        public void PanelPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnBoletin_Click(object sender, EventArgs e)
+        {
+            OpenChildForm (new FrmBoletines());
         }
     }
 }

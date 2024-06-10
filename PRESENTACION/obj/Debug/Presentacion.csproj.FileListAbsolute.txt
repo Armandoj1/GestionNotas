@@ -18,7 +18,6 @@ C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\PR
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.ProgramaPrincipal.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmEstudiantes.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\Presentacion.csproj.AssemblyReference.cache
-C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.Form1.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmEstudiantes.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.ProgramaPrincipal.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.Properties.Resources.resources
@@ -64,3 +63,7 @@ C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.SubMenuCrearMaterias.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmCrearGrados.resources
 C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmMateriasGrados.resources
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\bin\Debug\DAL.dll.config
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmRegistrarNotas.resources
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.Loginc.resources
+C:\Users\José A. Rodríguez\source\repos\GestionNotas\GestionNotas\PRESENTACION\obj\Debug\PRESENTACION.FrmBoletines.resources

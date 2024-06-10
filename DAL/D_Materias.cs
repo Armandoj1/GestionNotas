@@ -13,201 +13,219 @@ namespace DAL
     public class D_Materias
     {
 
-        static string connectionString = "Data Source=sql.holamundodevs.com;Initial Catalog=Jose_NotasDB;User ID=joserodriguez;Password=Holamundo123*;";
-        SqlConnection connection = new SqlConnection(connectionString);
-
         public void AgregarMateria(string MateriaID, string NombreMateria)
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "AgregarMateria");
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-                cmd.Parameters.AddWithValue("@NombreMateria", NombreMateria);
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "AgregarMateria");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.Parameters.AddWithValue("@NombreMateria", NombreMateria);
 
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException(ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
             }
         }
 
         public DataTable MostraMateriaGrado()
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "GradosMaterias");
-                SqlDataAdapter tabla = new SqlDataAdapter(cmd);
-                DataTable datos = new DataTable();
-                tabla.Fill(datos);
-                return datos;
-
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
+                try
                 {
-                    connection.Close();
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "GradosMaterias");
+                    SqlDataAdapter tabla = new SqlDataAdapter(cmd);
+                    DataTable datos = new DataTable();
+                    tabla.Fill(datos);
+                    return datos;
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+
                 }
             }
         }
 
         public void VincularMateriaGrado(string MateriaID, int GradoID)
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "Vincular2");
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-                cmd.Parameters.AddWithValue("@GradoID", GradoID);
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
+                try
                 {
-                    connection.Close();
+
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "VincularGrados");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
                 }
             }
-
         }
 
-        public void VincularMateria(string MateriaID, string DocenteID)
+        public void VincularMateria(string MateriaID, string DocenteID, int GradoID)
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "Docente");
-                cmd.Parameters.AddWithValue("@DocenteID", DocenteID);
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException(ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "Docente");
+                    cmd.Parameters.AddWithValue("@DocenteID", DocenteID);
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
             }
         }
-
 
 
 
         public DataTable MostrarMateriasCreacion()
         {
-            try
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "ListarMaterias");
-                DataTable dataTable = new DataTable();
-                SqlDataAdapter datos = new SqlDataAdapter(cmd);
-                datos.Fill(dataTable);
-                return dataTable;
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-
-                if (connection.State == ConnectionState.Open)
+            using (SqlConnection connection = Conexion.GetConnection())
                 {
-                    connection.Close();
-                }
+                    try
+                    {
+                        connection.Open();
+                        SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Accion", "ListarMaterias");
+                        DataTable dataTable = new DataTable();
+                        SqlDataAdapter datos = new SqlDataAdapter(cmd);
+                        datos.Fill(dataTable);
+                        return dataTable;
 
+                    }
+                    catch (Exception ex)
+                    {
+
+                        throw new ApplicationException("Error: " + ex.Message);
+                    }
+                    finally
+                    {
+
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+
+                    }
+                }
             }
-        }
+        
+    
 
         public DataTable MostrarMaterias()
         {
-
-            try
-            {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand("GestionarMaterias", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@Accion", "MostrarMaterias");
-                DataTable dataTable = new DataTable();
-                SqlDataAdapter datos = new SqlDataAdapter(command);
-                datos.Fill(dataTable);
-
-                return dataTable;
-
-            }
-            catch (Exception ex)
+            using (SqlConnection connection = Conexion.GetConnection())
             {
 
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+                try
+                {
+                    connection.Open();
 
+                    SqlCommand command = new SqlCommand("GestionarMaterias", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Accion", "MostrarMaterias");
+                    DataTable dataTable = new DataTable();
+                    SqlDataAdapter datos = new SqlDataAdapter(command);
+                    datos.Fill(dataTable);
+
+                    return dataTable;
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
+            }
         }
 
         public void ModificarMateria(string NombreMateria, string MateriaID)
         {
-
-            try
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "Modificar");
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-                cmd.Parameters.AddWithValue("@NombreMateria", NombreMateria);
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
+            using (SqlConnection connection = Conexion.GetConnection())
             {
 
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "Modificar");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.Parameters.AddWithValue("@NombreMateria", NombreMateria);
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
             }
 
         }
@@ -215,108 +233,119 @@ namespace DAL
 
         public void EliminarMateria(string MateriaID)
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "EliminarMateria");
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "EliminarMateria");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.ExecuteNonQuery();
 
 
 
-            }
-            catch (Exception ex)
-            {
+                }
+                catch (Exception ex)
+                {
 
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
 
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
             }
         }
 
 
-        public void CambiarAsignacion(string MateriaID, string DocenteID)
+        public void CambiarAsignacion(string MateriaID, string DocenteID, int GradoID)
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "CambiarAsignacion");
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-                cmd.Parameters.AddWithValue("@DocenteID", DocenteID);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "CambiarAsignacion");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.Parameters.AddWithValue("@DocenteID", DocenteID);
+                    cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
             }
 
         }
     
         public void EliminarAsignacion(string MateriaID)
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "EliminarAsignacion");
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarMaterias", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "EliminarAsignacion");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.ExecuteNonQuery();
 
 
 
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
             }
-            catch (Exception ex)
-            {
-
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
-
 
 
         }
 
         public void EliminarVinculacion(string MateriaID, int GradoID)
         {
-            try
+            using (SqlConnection connection = Conexion.GetConnection())
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "EliminarMateriaGrado");
-                cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
-                cmd.Parameters.AddWithValue("@GradoID", GradoID);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarGrados", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "EliminarMateriaGrado");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
             }
         }
-
 
 
     }

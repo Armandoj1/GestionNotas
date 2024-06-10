@@ -48,8 +48,6 @@ namespace PRESENTACION
 
             }
 
-           
-
         }
             
 
@@ -57,7 +55,7 @@ namespace PRESENTACION
         public void formato()
         {
             dataGridView1.Columns[0].HeaderText = "Nombre completo";
-            dataGridView1.Columns[0].Width = 290;
+            dataGridView1.Columns[0].Width = 236;
             dataGridView1.Columns[1].HeaderText = "Cédula";
             dataGridView1.Columns[1].Width = 120;
             dataGridView1.Columns[2].HeaderText = "Fecha de nacimiento";
@@ -68,8 +66,10 @@ namespace PRESENTACION
             dataGridView1.Columns[4].Width = 150;
             dataGridView1.Columns[5].HeaderText = "Telefono";
             dataGridView1.Columns[5].Width = 100;
-            dataGridView1.Columns[6].HeaderText = "Materia";
-            dataGridView1.Columns[6].Width = 140;
+            dataGridView1.Columns[6].HeaderText = "Correo";
+            dataGridView1.Columns[6].Width = 350;
+            dataGridView1.Columns[8].HeaderText = "Materias";
+            dataGridView1.Columns[8].Width = 105;
 
         }
 
@@ -98,7 +98,7 @@ namespace PRESENTACION
             try
             {
                 if (TxtCC.Text != "" && TxtNombre.Text != "" && PickerNacimiento.Text != "" && TxtDireccion.Text != ""
-                    && CboxEspecialidad.Text != "" && TxtTelefono.Text != "")
+                    && CboxEspecialidad.Text != "" && TxtTelefono.Text != "" && TxtCorreo.Text != "")
                 {
                     valores.CC1 = TxtCC.Text;
                     valores.Nombre1 = TxtNombre.Text;
@@ -111,8 +111,9 @@ namespace PRESENTACION
 
                     //Conversión de la fecha de nacimiento a un formato aceptado por la base de datos
                     valores.FechaNacimiento1 = Convert.ToDateTime(fechaNacimiento.ToString("yyyy-MM-dd"));
+                    valores.Correo1 = TxtCorreo.Text;
 
-                    docentes.AgregarDocente(valores.Nombre1, valores.CC1, valores.FechaNacimiento1, valores.Direccion1, valores.Especialidad1, valores.Telefono1);
+                    docentes.AgregarDocente(valores.Nombre1, valores.CC1, valores.FechaNacimiento1, valores.Direccion1, valores.Especialidad1, valores.Telefono1, valores.Correo1);
 
 
                     MessageBox.Show("¡Docente agregado de manera exitosa!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -150,8 +151,9 @@ namespace PRESENTACION
                     valores.Direccion1 = TxtDireccion.Text;
                     string fechaNacimiento = valores.FechaNacimiento1.ToString("yyyy-MM-dd");
                     valores.CC1 = TxtCC.Text;
+                    valores.Correo1 = TxtCorreo.Text;
 
-                    docentes.ModificarDocente(valores.CC1, valores.Nombre1, Convert.ToDateTime(fechaNacimiento), valores.Direccion1, valores.Especialidad1, valores.Telefono1);
+                    docentes.ModificarDocente(valores.CC1, valores.Nombre1, Convert.ToDateTime(fechaNacimiento), valores.Direccion1, valores.Especialidad1, valores.Telefono1, valores.Correo1);
 
                     MessageBox.Show("¡Datos del docente modificados con éxito!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -202,14 +204,16 @@ namespace PRESENTACION
                     string fechaNacimiento = row.Cells["FechaNacimiento"].Value.ToString();
                     string direccion = row.Cells["Direccion"].Value.ToString();
                     string telefono = row.Cells["Telefono"].Value.ToString();
-                    string Especialidad = row.Cells["EspecialidadID"].Value.ToString();
+                    string Correo = row.Cells["Correo"].Value.ToString();
+
 
                     TxtNombre.Text = nombre;
                     TxtCC.Text = cc;
                     PickerNacimiento.Value = DateTime.Parse(fechaNacimiento);
                     TxtDireccion.Text = direccion;
                     TxtTelefono.Text = telefono;
-                    CboxEspecialidad.Text = Especialidad;
+                    TxtCorreo.Text = Correo;
+
 
                 }
 
@@ -240,7 +244,6 @@ namespace PRESENTACION
                     if (resultado == DialogResult.Yes)
                     {
                         docentes.EliminarDocente(TxtCC.Text);
-                        MessageBox.Show("¡Datos del docente eliminado!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -255,14 +258,14 @@ namespace PRESENTACION
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error al intentar eliminar los datos del docente: " + ex.Message);;
+                MessageBox.Show("Error al intentar eliminar los datos del docente: " + ex.Message);
             }
             finally
             {
                 Limpiar();
                 MostrarDgvDocentes();
             }
+
         }
 
         private void TxtTelefono_TextChanged(object sender, EventArgs e)
@@ -309,6 +312,24 @@ namespace PRESENTACION
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnAgregarEspecialidad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string NombreEspecialidad = CboxEspecialidad.Text;
+                docentes.AgregarEspecialidad(NombreEspecialidad);
+                MessageBox.Show("¡Especialidad agregada!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadComboBox();
+            }
+            catch (Exception ex) 
+            {
+
+                MessageBox.Show("Error al agregar la especialidad: " + ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);;
+            } 
+
 
         }
     }

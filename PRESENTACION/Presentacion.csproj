@@ -59,11 +59,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmBoletines.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmBoletines.Designer.cs">
+      <DependentUpon>FrmBoletines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loginc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginc.Designer.cs">
+      <DependentUpon>Loginc.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCrearGrados.cs">
       <SubType>Form</SubType>
@@ -121,8 +127,11 @@
     <Compile Include="SubMenuCrearMaterias.Designer.cs">
       <DependentUpon>SubMenuCrearMaterias.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBoletines.resx">
+      <DependentUpon>FrmBoletines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginc.resx">
+      <DependentUpon>Loginc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearGrados.resx">
       <DependentUpon>FrmCrearGrados.cs</DependentUpon>
@@ -153,6 +162,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SubMenuAsignarMaterias.resx">
       <DependentUpon>SubMenuAsignarMaterias.cs</DependentUpon>
@@ -183,6 +193,27 @@
       <Project>{1b0dba69-c131-4f62-8eeb-f60fb54f0a03}</Project>
       <Name>Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School Building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subtract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

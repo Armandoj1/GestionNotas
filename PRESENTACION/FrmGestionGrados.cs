@@ -21,7 +21,7 @@ namespace PRESENTACION
     {
         B_Grados grados = new B_Grados();
         E_Grados variables = new E_Grados();
-
+        string GradoID;
         #region "Detalles"
 
 
@@ -40,15 +40,16 @@ namespace PRESENTACION
         {
 
             DgvEstudiantesSinGrados.Columns[0].HeaderText = "Cédula";
-            DgvEstudiantesSinGrados.Columns[0].Width = 140;
+            DgvEstudiantesSinGrados.Columns[0].Width = 120;
             DgvEstudiantesSinGrados.Columns[1].HeaderText = "Nombre completo";
-            DgvEstudiantesSinGrados.Columns[1].Width = 250;
+            DgvEstudiantesSinGrados.Columns[1].Width = 217;
             DgvEstudiantesSinGrados.Columns[2].HeaderText = "F. Nacimiento";
             DgvEstudiantesSinGrados.Columns[2].Width = 150;
             DgvEstudiantesSinGrados.Columns[3].HeaderText = "Dirección";
             DgvEstudiantesSinGrados.Columns[3].Width = 160;
             DgvEstudiantesSinGrados.Columns[4].HeaderText = "Teléfono";
             DgvEstudiantesSinGrados.Columns[4].Width = 123;
+            DgvEstudiantesSinGrados.Columns[6].Width = 300;
 
 
         }
@@ -56,15 +57,16 @@ namespace PRESENTACION
         {
 
             DgvEstudiantesConGrados.Columns[0].HeaderText = "Cédula";
-            DgvEstudiantesConGrados.Columns[0].Width = 140;
+            DgvEstudiantesConGrados.Columns[0].Width = 120;
             DgvEstudiantesConGrados.Columns[1].HeaderText = "Nombre completo";
-            DgvEstudiantesConGrados.Columns[1].Width = 250;
+            DgvEstudiantesConGrados.Columns[1].Width = 255;
             DgvEstudiantesConGrados.Columns[2].HeaderText = "F. Nacimiento";
             DgvEstudiantesConGrados.Columns[2].Width = 150;
             DgvEstudiantesConGrados.Columns[3].HeaderText = "Grado";
-            DgvEstudiantesConGrados.Columns[3].Width = 160;
+            DgvEstudiantesConGrados.Columns[3].Width = 80;
             DgvEstudiantesConGrados.Columns[4].HeaderText = "Teléfono";
             DgvEstudiantesConGrados.Columns[4].Width = 123;
+            DgvEstudiantesConGrados.Columns[6].Width = 340;
 
 
         }
@@ -108,22 +110,24 @@ namespace PRESENTACION
         #region "Procedimientos"
         private void BtnAgregarGrados_Click(object sender, EventArgs e)
         {
+
+            if (Txt_GradoID.Text != string.Empty)
+            {
+                grados.VincularGrado(variables.EstudianteID, Convert.ToInt32(GradoID));
+
+                MessageBox.Show("¡Se ha vinculado el estudiante al grado de manenar exitosa!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+
+            }
+            else
+            {
+                MessageBox.Show("¡Aún te faltan campos por llenar!", "Mensaje del sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             try
             {
-                if (Txt_GradoID.Text != string.Empty)
-                {
-                    grados.VincularGrado(variables.EstudianteID, variables.GradoID);
-
-                    MessageBox.Show("¡Se ha vinculado el estudiante al grado de manenar exitosa!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Limpiar();
-                    
-                }
-                else
-                {
-                    MessageBox.Show("¡Aún te faltan campos por llenar!", "Mensaje del sistema",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
+               
 
 
             }
@@ -192,8 +196,8 @@ namespace PRESENTACION
             {
                 if (dataGridView1.Rows.Count > 0)
                 {
-                    string GradoID = dataGridView1.CurrentRow.Cells["GradoID"].Value.ToString();
-                    Txt_GradoID.Text = GradoID;
+                    GradoID = dataGridView1.CurrentRow.Cells["GradoID"].Value.ToString();
+                    Txt_GradoID.Text = Convert.ToString(GradoID);
                     variables.GradoID = Convert.ToInt32(GradoID);
                 }
             }
@@ -319,6 +323,11 @@ namespace PRESENTACION
                 }
 
             }
+
+        }
+
+        private void DgvEstudiantesConGrados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
