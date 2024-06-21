@@ -28,9 +28,6 @@ namespace DAL
                     DataTable tabla = new DataTable();
                     datos.Fill(tabla);
                     return tabla;
-
-
-
                 }
                 catch (Exception ex)
                 {
@@ -40,6 +37,59 @@ namespace DAL
 
         }
 
+        public DataTable MostrarPeriodo()
+        {
+            using (SqlConnection connection = Conexion.GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarNotas", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "MostrarPeriodos");
+                    SqlDataAdapter datos = new SqlDataAdapter(cmd);
+                    DataTable tabla = new DataTable();
+                    datos.Fill(tabla);
+                    return tabla;
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException ("Error: " + ex.Message);
+                }
+
+
+
+            }
+        }
+
+        public DataTable FiltrarRegistroNotas(string MateriaID, int GradoID, int Periodo)
+        {
+            using(SqlConnection connection = Conexion.GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarNotas", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "FiltroRegistro");
+                    cmd.Parameters.AddWithValue("@MateriaID", MateriaID);
+                    cmd.Parameters.AddWithValue("@GradoID", GradoID);
+                    cmd.Parameters.AddWithValue("@PeriodoSeleccionado", Periodo);
+                    SqlDataAdapter datos = new SqlDataAdapter(cmd);
+                    DataTable tabla = new DataTable();
+                    datos.Fill(tabla);
+                    return tabla;
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+            }
+        }
 
 
 

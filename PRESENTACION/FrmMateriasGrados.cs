@@ -35,11 +35,12 @@ namespace PRESENTACION
         public void Formato()
         {
             dataGridView1.Columns[0].HeaderText = "Código grado";
-            dataGridView1.Columns[0].Width = 155;
+            dataGridView1.Columns[0].Width = 152;
             dataGridView1.Columns[1].HeaderText = "Nombre del grado";
-            dataGridView1.Columns[1].Width = 185;
-            dataGridView1.Columns[2].HeaderText = "Materias";
-            dataGridView1.Columns[2].Width = 779;
+            dataGridView1.Columns[1].Width = 180;
+            dataGridView1.Columns[2].HeaderText = "MateriasID";
+            dataGridView1.Columns[2].Width = 570;
+            dataGridView1.Columns[4].Width = 500;
         }
 
         public void Mostrar()

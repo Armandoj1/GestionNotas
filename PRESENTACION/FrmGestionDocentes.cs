@@ -82,6 +82,9 @@ namespace PRESENTACION
             CboxEspecialidad.Text = "";
             PickerNacimiento.Value = DateTime.Now;
             TxtCC.Enabled = true;
+            TxtCorreo.Clear();
+            BtnModificar.Visible = false;
+            BtnEliminar.Visible = false;
         }
     
     
@@ -193,6 +196,8 @@ namespace PRESENTACION
 
             if(resultado == DialogResult.Yes)
             {
+                BtnEliminar.Visible = true; 
+                BtnEliminar.Enabled = true;
                 TxtCC.Enabled = false;
 
                 if (dataGridView1.RowCount > 0 && e.RowIndex >= 0)

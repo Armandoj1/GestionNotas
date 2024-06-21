@@ -101,7 +101,7 @@ namespace DAL
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("GestionarUsuarios", connection);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Accion", "Verificar");
+                    cmd.Parameters.AddWithValue("@Accion", "EsDocente");
                     cmd.Parameters.AddWithValue("@Usuario", Usuario);
                     SqlDataAdapter datos = new SqlDataAdapter(cmd);
                     DataTable dataTable = new DataTable();

@@ -26,5 +26,18 @@ namespace BLL
         {
             notas.ModificarNota(EstudianteCC, MateriaID, Periodo, nota, Observacion);
         }
+
+        public DataTable FiltrarRegistroNotas(string MateriaID, int GradoID, int Periodo)
+        { 
+            return notas.FiltrarRegistroNotas(MateriaID, GradoID, Periodo);
         }
+
+        public DataTable MostrarPeriodo()
+        {
+            return notas.MostrarPeriodo();
+        }
+
+
+    }
+
 }

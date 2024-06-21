@@ -43,7 +43,7 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 77);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 61);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 920);
+            this.label2.Location = new System.Drawing.Point(23, 904);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 16);
             this.label2.TabIndex = 53;
@@ -79,7 +79,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 917);
+            this.textBox1.Location = new System.Drawing.Point(180, 901);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(171, 22);
             this.textBox1.TabIndex = 52;
@@ -115,7 +115,7 @@
             // 
             // TxtGradoID
             // 
-            this.TxtGradoID.Location = new System.Drawing.Point(769, 33);
+            this.TxtGradoID.Location = new System.Drawing.Point(771, 28);
             this.TxtGradoID.Name = "TxtGradoID";
             this.TxtGradoID.Size = new System.Drawing.Size(171, 22);
             this.TxtGradoID.TabIndex = 57;

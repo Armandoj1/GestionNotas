@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CboxGrado = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,8 +37,12 @@
             this.BtnSubirNotas = new System.Windows.Forms.Button();
             this.CboxMateria = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.BtnListar = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CboxPeriodo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.BtnListado = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +112,7 @@
             // CboxMateria
             // 
             this.CboxMateria.FormattingEnabled = true;
-            this.CboxMateria.Location = new System.Drawing.Point(659, 45);
+            this.CboxMateria.Location = new System.Drawing.Point(476, 44);
             this.CboxMateria.Name = "CboxMateria";
             this.CboxMateria.Size = new System.Drawing.Size(121, 24);
             this.CboxMateria.TabIndex = 5;
@@ -115,21 +120,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(500, 48);
+            this.label3.Location = new System.Drawing.Point(317, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Seleccione la materia:";
-            // 
-            // BtnListar
-            // 
-            this.BtnListar.Location = new System.Drawing.Point(333, 42);
-            this.BtnListar.Name = "BtnListar";
-            this.BtnListar.Size = new System.Drawing.Size(117, 26);
-            this.BtnListar.TabIndex = 7;
-            this.BtnListar.Text = "Listar curso";
-            this.BtnListar.UseVisualStyleBackColor = true;
-            this.BtnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // BtnModificar
             // 
@@ -141,12 +136,58 @@
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // CboxPeriodo
+            // 
+            this.CboxPeriodo.FormattingEnabled = true;
+            this.CboxPeriodo.Location = new System.Drawing.Point(689, 45);
+            this.CboxPeriodo.Name = "CboxPeriodo";
+            this.CboxPeriodo.Size = new System.Drawing.Size(68, 24);
+            this.CboxPeriodo.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(625, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Periodo:";
+            // 
+            // BtnListado
+            // 
+            this.BtnListado.Location = new System.Drawing.Point(839, 42);
+            this.BtnListado.Name = "BtnListado";
+            this.BtnListado.Size = new System.Drawing.Size(161, 30);
+            this.BtnListado.TabIndex = 13;
+            this.BtnListado.Text = "Listar";
+            this.BtnListado.UseVisualStyleBackColor = true;
+            this.BtnListado.Click += new System.EventHandler(this.BtnListado_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1402, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Listar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmRegistrarNotas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1579, 945);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnListado);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CboxPeriodo);
             this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.BtnListar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CboxMateria);
             this.Controls.Add(this.BtnSubirNotas);
@@ -156,7 +197,6 @@
             this.Controls.Add(this.CboxGrado);
             this.Name = "FrmRegistrarNotas";
             this.Text = "FrmRegistrarNotas";
-            this.Load += new System.EventHandler(this.FrmRegistrarNotas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -174,7 +214,11 @@
         private System.Windows.Forms.Button BtnSubirNotas;
         private System.Windows.Forms.ComboBox CboxMateria;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button BtnListar;
         private System.Windows.Forms.Button BtnModificar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ComboBox CboxPeriodo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button BtnListado;
+        private System.Windows.Forms.Button button1;
     }
 }

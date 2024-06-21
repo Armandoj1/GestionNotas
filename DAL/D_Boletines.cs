@@ -165,6 +165,30 @@ namespace DAL
             }
         }
 
+        public DataTable MostrarParaImprimir(string CC)
+        {
+            using (SqlConnection connection = Conexion.GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarNotas", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "ImprimirBoletin");
+                    cmd.Parameters.AddWithValue("@EstudianteCC", CC);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+            }
+        }
 
 
 

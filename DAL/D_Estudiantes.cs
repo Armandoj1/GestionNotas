@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Data;
 using DAL;
 public class D_Estudiantes
-{ 
+{
     public DataTable ConsultarAlumnos()
     {
         using (SqlConnection connection = Conexion.GetConnection())
@@ -12,27 +12,28 @@ public class D_Estudiantes
             try
             {
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("GestionarAlumnos", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Accion", "Mostrar");
+                SqlCommand command = new SqlCommand("GestionarAlumnos", connection);
 
-                SqlDataAdapter data = new SqlDataAdapter(cmd);
-                DataTable dataTable = new DataTable();
-                data.Fill(dataTable);
-                return dataTable;
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Accion", "Mostrar");
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable tabla = new DataTable();
+                dataAdapter.Fill(tabla);
+                return tabla;
             }
-            catch (Exception ex)
+
+            catch (Exception)
             {
-                throw new ApplicationException("Error al consultar los alumnos." + ex);
+                throw;
             }
             finally
             {
                 if (connection.State == ConnectionState.Open)
                     connection.Close();
             }
+
         }
     }
-
 
 
     public DataTable BuscarAlumno(string CC)
@@ -66,7 +67,7 @@ public class D_Estudiantes
         }
     }
 
-
+    
     public DataTable BuscarAlumnoGrado(string Grado)
     {
         using (SqlConnection connection = Conexion.GetConnection())

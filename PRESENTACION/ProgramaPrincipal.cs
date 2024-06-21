@@ -37,6 +37,17 @@ namespace PRESENTACION
 
         public void MostrarBotones()
         {
+            if (LblCargo.Text == "Estudiante")
+            {
+                BtnGestionarDocentes.Visible = false;
+                BtnGestionarAlumnos.Visible = false;
+                BtnGestionarGrados.Visible = false;
+                BtnGestionarMaterias.Visible = false;
+                BtnGestionarDocentes.Visible = false;
+                BtnBoletin.Visible = false;
+                btnGenerarBoletines.Visible = false;
+                BtnImprimirBoletin.Visible = true;
+            }
             if (LblCargo.Text == "Directivo")
             {
                 BtnGestionarDocentes.Visible = true;
@@ -48,7 +59,7 @@ namespace PRESENTACION
                 btnGenerarBoletines.Visible = false;
                 BtnImprimirBoletin.Visible = true;
             }
-            else if (LblCargo.Text == "Docente")
+            if (LblCargo.Text == "Docente")
             {
                 BtnGestionarDocentes.Visible = false;
                 BtnGestionarAlumnos.Visible = false;
@@ -59,9 +70,8 @@ namespace PRESENTACION
                 btnGenerarBoletines.Visible = true;
 
             }
-
-            }
-
+          
+        }
         public ProgramaPrincipal()
         {
             InitializeComponent();

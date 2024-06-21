@@ -281,5 +281,35 @@ namespace DAL
         }
 
 
+
+
+        public DataTable ObtenerNotasPorEstudiante(string estudianteCC)
+        {
+            using (SqlConnection connection = Conexion.GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("GestionarBoletin", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Accion", "ImprimirBoletin");
+                    cmd.Parameters.AddWithValue("@EstudianteCC", estudianteCC);
+                    SqlDataAdapter datos = new SqlDataAdapter(cmd);
+                    DataTable tabla = new DataTable();
+                    datos.Fill(tabla);
+                    return tabla;
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
+            }
+        }
+
     }
 }

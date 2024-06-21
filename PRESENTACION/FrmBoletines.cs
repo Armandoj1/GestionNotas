@@ -36,18 +36,21 @@ namespace PRESENTACION
         {
             dataGridView1.Columns[0].HeaderText = "Identificación";
             dataGridView1.Columns[0].Width = 120;
-            dataGridView1.Columns[1].HeaderText = "Nombre del estudiante";
+            dataGridView1.Columns[1].HeaderText = "Nombre";
             dataGridView1.Columns[1].Width = 200;
             dataGridView1.Columns[2].HeaderText = "Grado";
             dataGridView1.Columns[2].Width = 70;
             dataGridView1.Columns[3].HeaderText = "Materia";
             dataGridView1.Columns[3].Width = 90;
-            dataGridView1.Columns[4].HeaderText = "Nota";
-            dataGridView1.Columns[4].Width = 70;
-            dataGridView1.Columns[5].HeaderText = "Periodo";
-            dataGridView1.Columns[5].Width = 70;
-            dataGridView1.Columns[6].HeaderText = "Observaciones";
-            dataGridView1.Columns[6].Width = 860;
+            dataGridView1.Columns[4].HeaderText = "Nota 1°P ";
+            dataGridView1.Columns[4].Width = 80;
+            dataGridView1.Columns[5].HeaderText = "Nota 2°P ";
+            dataGridView1.Columns[5].Width = 80;
+            dataGridView1.Columns[6].HeaderText = "Nota 3°P ";
+            dataGridView1.Columns[6].Width = 80;
+            dataGridView1.Columns[7].HeaderText = "Nota 4°P ";
+            dataGridView1.Columns[7].Width = 80;
+            dataGridView1.Columns[10].Width = 402;
 
 
         }

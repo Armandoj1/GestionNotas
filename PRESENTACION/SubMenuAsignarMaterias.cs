@@ -112,7 +112,8 @@ namespace PRESENTACION
             dataGridView1.Columns[2].HeaderText = "Cédula del docente";
             dataGridView1.Columns[2].Width = 220;
             dataGridView1.Columns[3].HeaderText = "Nombre del docente";
-            dataGridView1.Columns[3].Width = 500;
+            dataGridView1.Columns[3].Width = 479;
+            dataGridView1.Columns[4].Width = 400;
         }
 
         private void BtnAgregarMateria_Click(object sender, EventArgs e)
@@ -134,10 +135,10 @@ namespace PRESENTACION
                 MostrarDgvMaterias();
                 limpiar();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show("Error: " + ex.Message, "Mensaje del sistema");;
             }
         }
 

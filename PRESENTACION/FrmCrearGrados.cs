@@ -36,7 +36,7 @@ namespace PRESENTACION
             dataGridView2.Columns[0].HeaderText = "Código del grado";
             dataGridView2.Columns[0].Width = 445;
             dataGridView2.Columns[1].HeaderText = "Grado";
-            dataGridView2.Columns[1].Width = 630;
+            dataGridView2.Columns[1].Width = 1057;
         }
 
         public void MostrarGrado()

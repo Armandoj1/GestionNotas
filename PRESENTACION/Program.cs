@@ -17,7 +17,7 @@ namespace PRESENTACION
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImprimirBoletin());
+            Application.Run(new Loginc());
         }
     }
 }
