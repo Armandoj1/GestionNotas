@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENTITY;
 
 namespace PRESENTACION
 {
@@ -14,15 +16,17 @@ namespace PRESENTACION
     {
 
 
-        BLL.B_Materias materias = new BLL.B_Materias();
-        ENTITY.E_Materias valores = new ENTITY.E_Materias();
-        BLL.B_GestionDocentes docentes = new BLL.B_GestionDocentes();
+        B_Materias materias = new B_Materias();
+        E_Materias valores = new E_Materias();
+        B_Grados grados = new B_Grados();
+        B_GestionDocentes docentes = new B_GestionDocentes();
 
         public SubMenuAsignarMaterias()
         {
             InitializeComponent();
             LoadComboBoxData();
             LoadComboBoxData1();
+            LoadComboBoxData2();
             MostrarDgvMaterias();
             limpiar();
         }
@@ -40,7 +44,26 @@ namespace PRESENTACION
         {
             CboxMateriaID.Text = "";
             CboxDocente.Text = "";
+            CboxGrado.Text = "";
             CboxDocente.Enabled = true;
+
+        }
+
+        private void LoadComboBoxData2()
+        {
+            try
+            {
+
+                DataTable datos = grados.MostrarGrados();
+                CboxGrado.DataSource = datos;
+                CboxGrado.DisplayMember = "NombreGrado";
+                CboxGrado.ValueMember = "GradoID";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
@@ -52,9 +75,6 @@ namespace PRESENTACION
                 CboxMateriaID.DataSource = dataTable;
                 CboxMateriaID.DisplayMember = "NombreMateria"; // La columna que se muestra en el ComboBox
                 CboxMateriaID.ValueMember = "MateriaID"; // El valor que se asocia con cada ítem (puedes cambiar esto según lo que necesites)
-
-
-
             }
             catch (Exception ex)
             {
@@ -92,7 +112,8 @@ namespace PRESENTACION
             dataGridView1.Columns[2].HeaderText = "Cédula del docente";
             dataGridView1.Columns[2].Width = 220;
             dataGridView1.Columns[3].HeaderText = "Nombre del docente";
-            dataGridView1.Columns[3].Width = 300;
+            dataGridView1.Columns[3].Width = 479;
+            dataGridView1.Columns[4].Width = 400;
         }
 
         private void BtnAgregarMateria_Click(object sender, EventArgs e)
@@ -105,16 +126,19 @@ namespace PRESENTACION
                 string MateriaID = Convert.ToString(CboxMateriaID.SelectedValue);
                 valores.MateriaID1 = MateriaID;
 
-                materias.VincularMateria(valores.MateriaID1, valores.DocenteID1);
+                string GradoID = Convert.ToString(CboxGrado.SelectedValue);
+                valores.GradoID1 = Convert.ToInt32(GradoID);
+
+                materias.VincularMateria(valores.MateriaID1, valores.DocenteID1,valores.GradoID1);
                 MessageBox.Show("¡Se ha asignado el docente a la materia de manera exitosa!", "Mensaje del sistema", 
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarDgvMaterias();
                 limpiar();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show("Error: " + ex.Message, "Mensaje del sistema");;
             }
         }
 
@@ -129,7 +153,10 @@ namespace PRESENTACION
                 string MateriaID = Convert.ToString(CboxMateriaID.SelectedValue);
                 valores.MateriaID1 = MateriaID;
 
-                materias.CambiarAsignacion(valores.MateriaID1, valores.DocenteID1);
+                string GradoID = Convert.ToString(CboxGrado.SelectedValue);
+                valores.GradoID1 = Convert.ToInt32(GradoID);
+
+                materias.CambiarAsignacion(valores.MateriaID1, valores.DocenteID1, valores.GradoID1);
                 MessageBox.Show("Se ha cambiado la asignación", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarDgvMaterias();
                 limpiar();
@@ -147,6 +174,54 @@ namespace PRESENTACION
 
 
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DialogResult resultado = MessageBox.Show("¿Desea modificar la asignación de este docente?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    BtnEliminar.Visible = true;
+                    BtnModificar.Visible = true;
+                    if (dataGridView1.RowCount > 0)
+                    {
+                        CboxDocente.Text = dataGridView1.CurrentRow.Cells["DocenteID"].Value.ToString();
+                        CboxMateriaID.Text = dataGridView1.CurrentRow.Cells["MateriaID"].Value.ToString();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);;
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               DialogResult resultado =  MessageBox.Show("¿Está seguro de que desea eliminar la asignación de esta materia del docente?", "Mensaje del sistema",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+
+                    valores.MateriaID1 = CboxMateriaID.Text;
+                    materias.EliminarAsignacion(valores.MateriaID1);
+                    MessageBox.Show("¡Asignación eliminada con éxito!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarDgvMaterias();
+                    limpiar();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

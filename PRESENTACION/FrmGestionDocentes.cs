@@ -13,7 +13,7 @@ using BLL;
 namespace PRESENTACION
 {
     public partial class FrmGestionDocentes : Form
-    {   
+    {
 
         B_GestionDocentes docentes = new B_GestionDocentes();
         E_Docentes valores = new E_Docentes();
@@ -22,6 +22,7 @@ namespace PRESENTACION
         {
             InitializeComponent();
             MostrarDgvDocentes();
+            LoadComboBox();
         }
 
         public void MostrarDgvDocentes()
@@ -29,12 +30,32 @@ namespace PRESENTACION
 
             dataGridView1.DataSource = docentes.MostrarDocentes();
             this.formato();
+
         }
+
+        public void LoadComboBox()
+        {
+            try
+            {
+                DataTable dataTable = docentes.MostrarEspecialidad();
+                CboxEspecialidad.DataSource = dataTable;
+                CboxEspecialidad.DisplayMember = "NombreEspecialidad"; // La columna que se muestra en el ComboBox
+                CboxEspecialidad.ValueMember = "EspecialidadID"; // El valor que se asocia con cada ítem (puedes cambiar esto según lo que necesites)
+
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+            
+
 
         public void formato()
         {
             dataGridView1.Columns[0].HeaderText = "Nombre completo";
-            dataGridView1.Columns[0].Width = 290;
+            dataGridView1.Columns[0].Width = 236;
             dataGridView1.Columns[1].HeaderText = "Cédula";
             dataGridView1.Columns[1].Width = 120;
             dataGridView1.Columns[2].HeaderText = "Fecha de nacimiento";
@@ -45,8 +66,10 @@ namespace PRESENTACION
             dataGridView1.Columns[4].Width = 150;
             dataGridView1.Columns[5].HeaderText = "Telefono";
             dataGridView1.Columns[5].Width = 100;
-            dataGridView1.Columns[6].HeaderText = "Materia";
-            dataGridView1.Columns[6].Width = 140;
+            dataGridView1.Columns[6].HeaderText = "Correo";
+            dataGridView1.Columns[6].Width = 350;
+            dataGridView1.Columns[8].HeaderText = "Materias";
+            dataGridView1.Columns[8].Width = 105;
 
         }
 
@@ -56,9 +79,12 @@ namespace PRESENTACION
             TxtNombre.Clear();
             TxtDireccion.Clear();
             TxtTelefono.Clear();
-            TxtEspecialidad.Clear();
+            CboxEspecialidad.Text = "";
             PickerNacimiento.Value = DateTime.Now;
             TxtCC.Enabled = true;
+            TxtCorreo.Clear();
+            BtnModificar.Visible = false;
+            BtnEliminar.Visible = false;
         }
     
     
@@ -75,20 +101,22 @@ namespace PRESENTACION
             try
             {
                 if (TxtCC.Text != "" && TxtNombre.Text != "" && PickerNacimiento.Text != "" && TxtDireccion.Text != ""
-                    && TxtEspecialidad.Text != "" && TxtTelefono.Text != "")
+                    && CboxEspecialidad.Text != "" && TxtTelefono.Text != "" && TxtCorreo.Text != "")
                 {
                     valores.CC1 = TxtCC.Text;
                     valores.Nombre1 = TxtNombre.Text;
                     valores.Direccion1 = TxtDireccion.Text;
                     valores.Telefono1 = TxtTelefono.Text;
-                    valores.Especialidad1 = TxtEspecialidad.Text;
+                    string Especialidad = Convert.ToString(CboxEspecialidad.SelectedValue);
+                    valores.Especialidad1 = Convert.ToInt32(Especialidad);
                     //Obtención del datos de la fecha de nacimiento
                     DateTime fechaNacimiento = PickerNacimiento.Value.Date;
 
                     //Conversión de la fecha de nacimiento a un formato aceptado por la base de datos
                     valores.FechaNacimiento1 = Convert.ToDateTime(fechaNacimiento.ToString("yyyy-MM-dd"));
+                    valores.Correo1 = TxtCorreo.Text;
 
-                    docentes.AgregarDocente(valores.Nombre1, valores.CC1, valores.FechaNacimiento1, valores.Direccion1, valores.Especialidad1, valores.Telefono1);
+                    docentes.AgregarDocente(valores.Nombre1, valores.CC1, valores.FechaNacimiento1, valores.Direccion1, valores.Especialidad1, valores.Telefono1, valores.Correo1);
 
 
                     MessageBox.Show("¡Docente agregado de manera exitosa!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -121,12 +149,14 @@ namespace PRESENTACION
                     valores.Nombre1 = TxtNombre.Text;
                     valores.FechaNacimiento1 = PickerNacimiento.Value.Date;
                     valores.Telefono1 = TxtTelefono.Text;
-                    valores.Especialidad1 = TxtEspecialidad.Text;
+                    string Especialidad = Convert.ToString(CboxEspecialidad.SelectedValue);
+                    valores.Especialidad1 = Convert.ToInt32(Especialidad);
                     valores.Direccion1 = TxtDireccion.Text;
                     string fechaNacimiento = valores.FechaNacimiento1.ToString("yyyy-MM-dd");
                     valores.CC1 = TxtCC.Text;
+                    valores.Correo1 = TxtCorreo.Text;
 
-                    docentes.ModificarDocente(valores.CC1, valores.Nombre1, Convert.ToDateTime(fechaNacimiento), valores.Direccion1, valores.Especialidad1, valores.Telefono1);
+                    docentes.ModificarDocente(valores.CC1, valores.Nombre1, Convert.ToDateTime(fechaNacimiento), valores.Direccion1, valores.Especialidad1, valores.Telefono1, valores.Correo1);
 
                     MessageBox.Show("¡Datos del docente modificados con éxito!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -166,6 +196,8 @@ namespace PRESENTACION
 
             if(resultado == DialogResult.Yes)
             {
+                BtnEliminar.Visible = true; 
+                BtnEliminar.Enabled = true;
                 TxtCC.Enabled = false;
 
                 if (dataGridView1.RowCount > 0 && e.RowIndex >= 0)
@@ -177,14 +209,16 @@ namespace PRESENTACION
                     string fechaNacimiento = row.Cells["FechaNacimiento"].Value.ToString();
                     string direccion = row.Cells["Direccion"].Value.ToString();
                     string telefono = row.Cells["Telefono"].Value.ToString();
-                    string Especialidad = row.Cells["Especialidad"].Value.ToString();
+                    string Correo = row.Cells["Correo"].Value.ToString();
+
 
                     TxtNombre.Text = nombre;
                     TxtCC.Text = cc;
                     PickerNacimiento.Value = DateTime.Parse(fechaNacimiento);
                     TxtDireccion.Text = direccion;
                     TxtTelefono.Text = telefono;
-                    TxtEspecialidad.Text = Especialidad;
+                    TxtCorreo.Text = Correo;
+
 
                 }
 
@@ -208,14 +242,13 @@ namespace PRESENTACION
         {
             try
             {
-                if (TxtBuscarCC.Text != "")
+                if (TxtCC.Text != "")
                 {
                     DialogResult resultado = MessageBox.Show("¿Seguro que deseas eliminar la información de este docente?", "Mensaje del sistema",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (resultado == DialogResult.Yes)
                     {
                         docentes.EliminarDocente(TxtCC.Text);
-                        MessageBox.Show("¡Datos del docente eliminado!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -230,14 +263,14 @@ namespace PRESENTACION
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error al intentar eliminar los datos del docente: " + ex.Message);;
+                MessageBox.Show("Error al intentar eliminar los datos del docente: " + ex.Message);
             }
             finally
             {
                 Limpiar();
                 MostrarDgvDocentes();
             }
+
         }
 
         private void TxtTelefono_TextChanged(object sender, EventArgs e)
@@ -274,12 +307,35 @@ namespace PRESENTACION
             }
         }
 
-        private void TxtEspecialidad_KeyPress(object sender, KeyPressEventArgs e)
+        private void CboxEspecialidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregarEspecialidad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string NombreEspecialidad = CboxEspecialidad.Text;
+                docentes.AgregarEspecialidad(NombreEspecialidad);
+                MessageBox.Show("¡Especialidad agregada!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadComboBox();
+            }
+            catch (Exception ex) 
+            {
+
+                MessageBox.Show("Error al agregar la especialidad: " + ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);;
+            } 
+
+
         }
     }
 }

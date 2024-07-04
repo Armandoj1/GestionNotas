@@ -29,7 +29,7 @@ namespace PRESENTACION
             dataGridView1.Columns[0].HeaderText = "Código de materia";
             dataGridView1.Columns[0].Width = 530;
             dataGridView1.Columns[1].HeaderText = "Nombre Materia";
-            dataGridView1.Columns[1].Width = 554;
+            dataGridView1.Columns[1].Width = 972;
         }
 
         public void MostrarDgvMaterias()
@@ -118,7 +118,7 @@ namespace PRESENTACION
             try
             {
                 DialogResult resultado = MessageBox.Show("¿Desea eliminar la información de esta materia?", "Mensaje del sistema",
-          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (resultado == DialogResult.Yes)
                 {

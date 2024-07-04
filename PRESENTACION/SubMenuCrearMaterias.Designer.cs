@@ -42,11 +42,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1137, 501);
+            this.dataGridView1.Size = new System.Drawing.Size(1555, 847);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -84,7 +84,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(9, 63);
+            this.BtnAgregar.Location = new System.Drawing.Point(494, 28);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(99, 29);
             this.BtnAgregar.TabIndex = 5;
@@ -94,29 +94,30 @@
             // 
             // BtnModificar
             // 
-            this.BtnModificar.Location = new System.Drawing.Point(140, 63);
+            this.BtnModificar.Location = new System.Drawing.Point(625, 28);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(99, 29);
             this.BtnModificar.TabIndex = 6;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Visible = false;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(263, 63);
+            this.BtnEliminar.Location = new System.Drawing.Point(748, 28);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(99, 29);
             this.BtnEliminar.TabIndex = 7;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Visible = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // SubMenuCrearMaterias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 633);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1579, 945);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.BtnAgregar);

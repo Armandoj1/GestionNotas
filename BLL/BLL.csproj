@@ -44,18 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="B_Boletines.cs" />
     <Compile Include="B_Estudiantescs.cs" />
     <Compile Include="B_Grados.cs" />
     <Compile Include="B_Materias.cs" />
+    <Compile Include="B_Usuario.cs" />
     <Compile Include="B_VincularGrado.cs" />
     <Compile Include="B_GestionDocentes.cs" />
-    <Compile Include="Testeo.cs" />
+    <Compile Include="B_GestionNotas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{214cdf4d-5180-4754-aa0c-f4ff848d8be9}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY\Entity.csproj">
+      <Project>{1b0dba69-c131-4f62-8eeb-f60fb54f0a03}</Project>
+      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

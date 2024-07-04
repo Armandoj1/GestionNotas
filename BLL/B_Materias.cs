@@ -22,9 +22,9 @@ namespace BLL
             return materias.MostrarMaterias();
         }
 
-        public void VincularMateria(string MateriaID, string DocenteID)
+        public void VincularMateria(string MateriaID, string DocenteID, int GradoID)
         {
-            materias.VincularMateria(MateriaID, DocenteID);
+            materias.VincularMateria(MateriaID, DocenteID, GradoID);
         }
 
         public DataTable MostrarMateriasCreacion()
@@ -42,9 +42,29 @@ namespace BLL
             materias.EliminarMateria(MateriaID);
         }
 
-        public void CambiarAsignacion(string MateriaID, string DocenteID)
+        public void CambiarAsignacion(string MateriaID, string DocenteID, int GradoID)
         {
-            materias.CambiarAsignacion(MateriaID, DocenteID);
+            materias.CambiarAsignacion(MateriaID, DocenteID, GradoID);
+        }
+
+        public void VincularMateriaGrado(string MateriaID, int GradoID)
+        {
+            materias.VincularMateriaGrado(MateriaID, GradoID);
+        }
+
+        public DataTable MostrarMateriasGrados()
+        {
+            return materias.MostraMateriaGrado();
+        }
+
+        public void EliminarAsignacion(string MateriaID)
+        {
+            materias.EliminarAsignacion(MateriaID);
+        }
+
+        public void EliminarVinculacion(string MateriaID, int GradoID)
+        {
+            materias.EliminarVinculacion(MateriaID, GradoID);
         }
 
     }
